@@ -122,3 +122,40 @@ behavior:"smooth"
 .gallery-grid img:hover{
     transform:scale(1.05);
 }
+/* CONTACT */
+
+.contact{
+    padding:70px 20px;
+    text-align:center;
+    background:#ffffff;
+}
+
+.contact h2{
+    font-size:36px;
+    margin-bottom:30px;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    background:#f5f5f5;
+    padding:30px;
+    border-radius:15px;
+    margin-bottom:30px;
+}
+
+.contact-box p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.contact-box a{
+    color:#0077cc;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.map{
+    max-width:1000px;
+    margin:auto;
+}
