@@ -299,3 +299,80 @@ border-radius:15px;
 margin-top:20px;
 color:#ff4d4d;
 }
+.contact{
+padding:80px 10%;
+background:#fff;
+}
+
+.contact h2{
+text-align:center;
+font-size:40px;
+color:#d60000;
+margin-bottom:40px;
+}
+
+.contact-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.contact-info p{
+margin:15px 0;
+font-size:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.contact-form textarea{
+height:120px;
+resize:none;
+}
+
+.contact-form button{
+border:none;
+cursor:pointer;
+}
+
+footer{
+background:#111;
+color:#fff;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+
+.contact-container{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+display:inline-block;
+margin:10px;
+}
+
+}
