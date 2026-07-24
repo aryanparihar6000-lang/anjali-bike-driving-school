@@ -376,3 +376,65 @@ margin:10px;
 }
 
 }
+/* Floating WhatsApp */
+
+.floating-whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:#25D366;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+z-index:999;
+}
+
+/* Floating Call */
+
+.floating-call{
+position:fixed;
+bottom:100px;
+right:25px;
+width:60px;
+height:60px;
+background:#ff3b30;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+z-index:999;
+}
+
+/* Top Button */
+
+#topBtn{
+display:none;
+position:fixed;
+bottom:175px;
+right:25px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#111;
+color:white;
+font-size:22px;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+z-index:999;
+}
+
+#topBtn:hover{
+background:#d60000;
+}
