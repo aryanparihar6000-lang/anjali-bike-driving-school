@@ -1,1 +1,3 @@
-console.log("Website Loaded Successfully");
+window.onload = function () {
+    console.log("Anjali Bike Driving School Website Loaded Successfully");
+};
