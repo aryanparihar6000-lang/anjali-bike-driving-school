@@ -1,3 +1,29 @@
-window.onload = function () {
-    console.log("Anjali Bike Driving School Website Loaded Successfully");
-};
+// Scroll To Top
+
+let topButton=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
+
+topButton.style.display="block";
+
+}else{
+
+topButton.style.display="none";
+
+}
+
+}
+
+function topFunction(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
