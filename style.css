@@ -940,3 +940,12 @@ transform:translateY(0);
 }
 
 }
+.site-logo{
+
+width:70px;
+
+height:70px;
+
+object-fit:contain;
+
+}
