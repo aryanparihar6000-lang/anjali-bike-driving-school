@@ -861,3 +861,82 @@ height:220px;
 }
 
 }
+/* ==========================
+   MOBILE MENU
+========================== */
+
+.menu-toggle{
+
+display:none;
+
+font-size:32px;
+
+cursor:pointer;
+
+color:#fff;
+
+}
+
+@media(max-width:992px){
+
+.menu-toggle{
+
+display:block;
+
+}
+
+nav{
+
+position:absolute;
+
+top:80px;
+
+left:0;
+
+width:100%;
+
+background:#111;
+
+display:none;
+
+padding:25px;
+
+}
+
+nav.active{
+
+display:block;
+
+animation:fade .4s;
+
+}
+
+nav ul{
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(-20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
