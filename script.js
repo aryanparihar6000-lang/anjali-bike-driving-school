@@ -210,3 +210,16 @@ behavior:"smooth"
 };
 
 console.log("Premium Website Loaded Successfully");
+/* ==========================
+MOBILE MENU
+========================== */
+
+const menu=document.getElementById("menu-toggle");
+
+const nav=document.querySelector("nav");
+
+menu.addEventListener("click",()=>{
+
+nav.classList.toggle("active");
+
+});
