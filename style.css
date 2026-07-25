@@ -169,6 +169,13 @@ text-align:center;
 padding:120px 20px;
 
 background:
+linear-gradient(rgba(0,0,0,.75),
+rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1517846693594-1567da72af75?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 
 linear-gradient(rgba(0,0,0,.72),
 
@@ -947,5 +954,86 @@ width:70px;
 height:70px;
 
 object-fit:contain;
+
+}
+/* ==========================
+PREMIUM HERO UPGRADE
+========================== */
+
+.hero-badge{
+
+display:inline-block;
+
+background:#ffffff15;
+
+border:1px solid rgba(255,255,255,.15);
+
+padding:10px 22px;
+
+border-radius:50px;
+
+margin-bottom:25px;
+
+font-weight:600;
+
+backdrop-filter:blur(10px);
+
+}
+
+.hero-info{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+margin-top:60px;
+
+flex-wrap:wrap;
+
+}
+
+.info-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(12px);
+
+padding:25px;
+
+border-radius:18px;
+
+min-width:220px;
+
+transition:.3s;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.info-card:hover{
+
+transform:translateY(-8px);
+
+border-color:#ff3131;
+
+box-shadow:0 20px 40px rgba(255,49,49,.25);
+
+}
+
+.info-card h3{
+
+font-size:30px;
+
+color:#ff3131;
+
+margin-bottom:10px;
+
+}
+
+.info-card p{
+
+color:#ddd;
 
 }
