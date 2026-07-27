@@ -145,67 +145,73 @@ img.style.filter="brightness(1)";
 });
 
 
+// =========================
 // Back To Top Button
+// =========================
 
-const topBtn=document.createElement("button");
+const topBtn = document.createElement("button");
 
-topBtn.innerHTML="⬆";
+topBtn.innerHTML = "⬆";
 
-topBtn.id="topBtn";
+topBtn.id = "topBtn";
 
 document.body.appendChild(topBtn);
 
-topBtn.style.position="fixed";
+topBtn.style.position = "fixed";
 
-topBtn.style.left="20px";
+topBtn.style.right = "18px";   // Right side
 
-topBtn.style.bottom="20px";
+topBtn.style.bottom = "210px"; // Call button ke upar
 
-topBtn.style.width="55px";
+topBtn.style.width = "50px";
 
-topBtn.style.height="55px";
+topBtn.style.height = "50px";
 
-topBtn.style.border="none";
+topBtn.style.border = "none";
 
-topBtn.style.borderRadius="50%";
+topBtn.style.borderRadius = "50%";
 
-topBtn.style.background="#ff3131";
+topBtn.style.background = "#333";
 
-topBtn.style.color="#fff";
+topBtn.style.color = "#fff";
 
-topBtn.style.fontSize="22px";
+topBtn.style.fontSize = "22px";
 
-topBtn.style.cursor="pointer";
+topBtn.style.cursor = "pointer";
 
-topBtn.style.display="none";
+topBtn.style.display = "none";
 
-topBtn.style.zIndex="9999";
+topBtn.style.zIndex = "9999";
 
-window.addEventListener("scroll",()=>{
+topBtn.style.boxShadow = "0 8px 20px rgba(0,0,0,.25)";
 
-if(window.scrollY>500){
+window.addEventListener("scroll", () => {
 
-topBtn.style.display="block";
+    if (window.scrollY > 500) {
 
-}
+        topBtn.style.display = "flex";
 
-else{
+        topBtn.style.alignItems = "center";
 
-topBtn.style.display="none";
+        topBtn.style.justifyContent = "center";
 
-}
+    } else {
 
-});
+        topBtn.style.display = "none";
 
-topBtn.onclick=()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
+    }
 
 });
+
+topBtn.onclick = () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
 
 };
 
