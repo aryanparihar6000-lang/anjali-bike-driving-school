@@ -427,79 +427,78 @@ class="btn whatsapp">
 
 <section class="booking" id="booking">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
+        <div class="section-title">
 
-<span>BOOK YOUR CLASS</span>
+            <span>BOOK YOUR CLASS</span>
 
-<h2>Start Your Bike Training</h2>
+            <h2>Start Your Bike Training</h2>
 
-<p>Fill the form and we will contact you soon.</p>
+            <p>Fill the form and we will contact you soon.</p>
 
-</div>
+        </div>
 
+        <form action="https://formspree.io/f/mlgqavzy" method="POST" class="booking-form">
 
-<form action="https://formspree.io/f/mlgqavzy" method="POST" class="booking-form">
+            <!-- Redirect after successful submission -->
+            <input type="hidden" name="_next" value="https://aryanparihar6000-lang.github.io/anjali-bike-driving-school/thankyou.html">
 
+            <!-- Spam Protection -->
+            <input type="text" name="_gotcha" style="display:none">
 
-<input 
-type="text" 
-name="name" 
-placeholder="Your Full Name"
-required>
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Full Name"
+                required>
 
+            <input
+                type="text"
+                name="address"
+                placeholder="Your Address"
+                required>
 
-<input 
-type="text" 
-name="address" 
-placeholder="Your Address"
-required>
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required>
 
+            <input
+                type="tel"
+                name="mobile"
+                placeholder="Mobile Number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                placeholder="10 Digit Mobile Number"
+                required>
 
-<input 
-type="email" 
-name="email" 
-placeholder="Your Email"
-required>
+            <select name="duration" required>
 
+                <option value="">Select Training Duration</option>
 
-<input 
-type="tel" 
-name="mobile" 
-placeholder="Mobile Number"
-required>
+                <option value="7 Days">
+                    7 Days Class
+                </option>
 
+                <option value="14 Days">
+                    14 Days Class
+                </option>
 
-<select name="duration" required>
+            </select>
 
-<option value="">Select Training Duration</option>
+            <textarea
+                name="message"
+                placeholder="Any Message"></textarea>
 
-<option value="7 Days">
-7 Days Class
-</option>
+            <button type="submit">
+                Submit Booking
+            </button>
 
-<option value="14 Days">
-14 Days Class
-</option>
+        </form>
 
-</select>
-
-
-<textarea 
-name="message"
-placeholder="Any Message">
-</textarea>
-
-
-<button type="submit">
-Submit Booking
-</button>
-
-
-</form>
-
-</div>
+    </div>
 
 </section>
 <!-- ================= CONTACT ================= -->
