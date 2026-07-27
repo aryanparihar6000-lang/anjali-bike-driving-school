@@ -294,20 +294,23 @@ class="btn whatsapp">
                 maxlength="10"
                 placeholder="10 Digit Mobile Number"
                 required>
-         <select name="course_type" required>
-
+       <select name="course_type" required>
     <option value="">Select Training Type</option>
-
     <option value="Bike Training">🏍️ Bike Training</option>
-
     <option value="Scooty Training">🛵 Scooty Training</option>
-
     <option value="Ladies Special Training">👩 Ladies Special Training</option>
+</select>
 
 <input
 type="date"
 name="start_date"
 required>
+
+<select name="duration" required>
+    <option value="">Select Training Duration</option>
+    <option value="7 Days">7 Days</option>
+    <option value="14 Days">14 Days</option>
+</select>
 
 <select name="duration" required>
 
@@ -325,17 +328,6 @@ Select Training Duration
 
 </select>
 
-                <option value="">Select Training Duration</option>
-
-                <option value="7 Days">
-                    7 Days Class
-                </option>
-
-                <option value="14 Days">
-                    14 Days Class
-                </option>
-
-            </select>
 <select name="time_slot" required>
 
     <option value="">Preferred Time</option>
