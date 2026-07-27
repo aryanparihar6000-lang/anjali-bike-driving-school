@@ -1098,3 +1098,46 @@ background:#d62828;
 color:#fff;
 
 }
+/* ===== Floating Action Buttons ===== */
+
+.float-btn{
+position:fixed;
+right:18px;
+width:52px;
+height:52px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+text-decoration:none;
+color:#fff;
+box-shadow:0 8px 20px rgba(0,0,0,.20);
+z-index:9999;
+transition:.3s;
+}
+
+.float-btn:hover{
+transform:scale(1.1);
+}
+
+.call-btn-float{
+bottom:220px;
+background:#d62828;
+}
+
+.whatsapp-btn-float{
+bottom:155px;
+background:#25D366;
+}
+
+.booking-btn-float{
+bottom:90px;
+background:#2563eb;
+}
+
+.top-btn-float{
+bottom:25px;
+background:#333;
+display:none;
+}
