@@ -32,14 +32,27 @@ margin:auto;
 /* Header */
 
 header{
+
 position:fixed;
+
 top:40px;
+
 left:0;
+
 width:100%;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(18px);
-box-shadow:0 4px 20px rgba(0,0,0,.08);
-z-index:999;
+
+background:rgba(255,255,255,.96);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+padding:10px 0;
+
+transition:.35s;
+
+z-index:9999;
+
 }
 header .container{
 
@@ -92,20 +105,28 @@ gap:35px;
 }
 
 nav a{
+
 color:#222;
-text-decoration:none;
-font-weight:600;
+
 font-size:15px;
+
+font-weight:600;
+
+text-decoration:none;
+
+padding:10px 16px;
+
+border-radius:30px;
+
 transition:.3s;
+
 }
 
 nav a:hover{
-color:#d62828;
-}
 
-nav a:hover{
+background:#E8F4FF;
 
-color:#ff3131;
+color:#0D6EFD;
 
 }
 
@@ -113,27 +134,29 @@ color:#ff3131;
 
 .call-btn{
 
-background:#d62828;
-padding:13px 28px;
+background:#0D6EFD;
+
+color:#fff;
+
+padding:12px 24px;
+
 border-radius:50px;
-color:white;
+
+font-size:15px;
+
 font-weight:600;
-text-decoration:none;
-transition:.35s;
+
+transition:.3s;
 
 }
 
 .call-btn:hover{
 
-background:#b71c1c;
-transform:translateY(-3px);
+background:#0B5ED7;
+
+transform:translateY(-2px);
 
 }
-.call-btn:hover{
-
-background:#ff4d4d;
-
-transform:translateY(-3px);
 
 }
 
@@ -632,11 +655,13 @@ animation:fadeUp .8s ease;
 }
 .site-logo{
 
-width:70px;
+width:55px;
 
-height:70px;
+height:55px;
 
 object-fit:contain;
+
+transition:.3s;
 
 }
 /* ==========================
