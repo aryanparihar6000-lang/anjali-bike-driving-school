@@ -1214,3 +1214,138 @@ transform:translateX(-50%);
 .slide-track:hover{
 animation-play-state:paused;
 }
+/* ===========================
+FLASH TRAINING DEAL
+=========================== */
+
+.flash-deal{
+padding:90px 20px;
+background:linear-gradient(180deg,#f8fbff,#eef6ff);
+}
+
+.flash-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.flash-title h2{
+font-size:42px;
+font-weight:800;
+color:#111;
+}
+
+.flash-title p{
+margin-top:10px;
+font-size:18px;
+color:#666;
+}
+
+.deal-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:30px;
+}
+
+.deal-card{
+background:#fff;
+border-radius:22px;
+padding:25px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+transition:.35s;
+position:relative;
+overflow:hidden;
+}
+
+.deal-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 45px rgba(0,0,0,.15);
+}
+
+.deal-card img{
+width:100%;
+height:180px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+.deal-card h3{
+font-size:24px;
+margin-bottom:10px;
+color:#111;
+}
+
+.days{
+color:#666;
+margin-bottom:15px;
+font-weight:600;
+}
+
+.old-price{
+display:block;
+font-size:22px;
+text-decoration:line-through;
+color:#888;
+}
+
+.price h2{
+font-size:42px;
+color:#e11d48;
+margin:10px 0;
+}
+
+.discount{
+display:inline-block;
+padding:8px 18px;
+background:#d1fae5;
+color:#047857;
+font-weight:700;
+border-radius:50px;
+margin:15px 0;
+}
+
+.deal-btn{
+display:block;
+margin-top:18px;
+padding:15px;
+background:#2563eb;
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-weight:700;
+transition:.3s;
+}
+
+.deal-btn:hover{
+background:#1d4ed8;
+}
+
+.featured{
+border:3px solid #22c55e;
+transform:scale(1.03);
+}
+
+.featured::before{
+content:"BEST VALUE";
+position:absolute;
+top:15px;
+right:-35px;
+background:#22c55e;
+color:#fff;
+padding:8px 45px;
+transform:rotate(45deg);
+font-size:12px;
+font-weight:700;
+}
+
+@media(max-width:768px){
+
+.flash-title h2{
+font-size:30px;
+}
+
+.price h2{
+font-size:34px;
+}
+
+}
