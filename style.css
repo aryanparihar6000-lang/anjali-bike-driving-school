@@ -33,7 +33,7 @@ margin:auto;
 
 header{
 position:fixed;
-top:0;
+top:40px;
 left:0;
 width:100%;
 background:rgba(255,255,255,.95);
@@ -151,7 +151,7 @@ justify-content:center;
 
 text-align:center;
 
-padding:120px 20px;
+padding:170px 20px 120px;
 
 background:
 linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
@@ -1177,4 +1177,73 @@ background:#25D366;
 .booking-btn-float{
 bottom:30px;
 background:#2563eb;
+}
+/* ===========================
+TOP SLIDING INFO BAR
+=========================== */
+
+.top-bar{
+
+width:100%;
+
+height:40px;
+
+background:#E8F4FF;
+
+overflow:hidden;
+
+display:flex;
+
+align-items:center;
+
+border-bottom:1px solid #cfe3f5;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+z-index:10000;
+
+}
+
+.top-slide{
+width:100%;
+overflow:hidden;
+}
+
+.slide-track{
+
+display:flex;
+width:max-content;
+white-space:nowrap;
+animation:marquee 25s linear infinite;
+
+}
+
+.slide-track span{
+
+display:inline-flex;
+align-items:center;
+margin-right:60px;
+font-size:15px;
+font-weight:600;
+color:#222;
+
+}
+
+@keyframes marquee{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+.slide-track:hover{
+animation-play-state:paused;
 }
