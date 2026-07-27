@@ -11,17 +11,8 @@ scroll-behavior:smooth;
 }
 
 body{
-
-font-family:'Poppins',sans-serif;
-
-background:#0f1115;
-
-color:#fff;
-
-line-height:1.7;
-
-overflow-x:hidden;
-
+    background:#f8fafc;
+    color:#1f2937;
 }
 
 /* Container */
@@ -212,13 +203,8 @@ font-size:14px;
 }
 
 .hero h1{
-
-font-size:64px;
-
-font-weight:800;
-
-margin-bottom:20px;
-
+    font-size:clamp(2rem,5vw,4rem);
+    line-height:1.2;
 }
 
 .hero-text{
