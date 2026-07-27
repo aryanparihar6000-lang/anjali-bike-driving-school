@@ -487,14 +487,53 @@ font-size:18px;
 }
 
 .section-title h2{
-font-size:30px;
+
+font-size:clamp(2rem,4vw,3rem);
+
+font-weight:700;
+
+color:#222;
+
+margin-bottom:15px;
+
+}
+
+.section-title p{
+
+font-size:17px;
+
+color:#666;
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+.section-title span{
+
+color:#d62828;
+
+font-weight:600;
+
+letter-spacing:1px;
+
 }
 
 .btn,
-.course-btn,
-.call-btn{
-width:100%;
-text-align:center;
+.call-btn,
+.booking-form button{
+
+box-shadow:0 12px 30px rgba(214,40,40,.25);
+
+}
+
+.btn:hover,
+.call-btn:hover,
+.booking-form button:hover{
+
+box-shadow:0 18px 35px rgba(214,40,40,.35);
+
 }
 
 .gallery-item img{
@@ -562,13 +601,13 @@ gap:25px;
 
 }
 
-@keyframes fade{
+@keyframes fadeUp{
 
 from{
 
 opacity:0;
 
-transform:translateY(-20px);
+transform:translateY(40px);
 
 }
 
@@ -579,6 +618,16 @@ opacity:1;
 transform:translateY(0);
 
 }
+
+}
+
+.hero-content,
+.course-card,
+.gallery-grid img,
+.contact-card,
+.stat-box{
+
+animation:fadeUp .8s ease;
 
 }
 .site-logo{
@@ -990,5 +1039,62 @@ grid-template-columns:1fr;
 padding:0 10px;
 
 }
+
+}
+.course-card,
+.contact-card,
+.stat-box,
+.gallery-grid img,
+.booking-form{
+
+transition:all .35s ease;
+
+}
+
+.course-card:hover,
+.contact-card:hover,
+.stat-box:hover{
+
+transform:translateY(-8px);
+
+}
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+background:#d62828;
+border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#b71c1c;
+}
+.gallery-grid{
+
+overflow:hidden;
+
+}
+
+.gallery-grid img{
+
+cursor:pointer;
+
+}
+
+.gallery-grid img:hover{
+
+transform:scale(1.05);
+
+}
+::selection{
+
+background:#d62828;
+
+color:#fff;
 
 }
