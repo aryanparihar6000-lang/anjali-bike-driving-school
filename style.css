@@ -2665,3 +2665,50 @@ COMPACT MOBILE REVIEWS
 }
 
 }
+/* ==========================
+   FOOTER COMPACT DESIGN
+========================== */
+
+footer{
+    padding:25px 15px !important;
+    margin-top:20px;
+}
+
+.footer-content h3{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.footer-content p{
+    margin:5px 0;
+    font-size:14px;
+}
+
+.footer-buttons{
+    margin:10px 0;
+}
+
+.footer-buttons a{
+    padding:10px 20px;
+    margin:5px;
+    font-size:14px;
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+footer{
+    padding:20px 10px !important;
+}
+
+.footer-content h3{
+    font-size:20px;
+}
+
+.footer-content p{
+    font-size:13px;
+}
+
+}
