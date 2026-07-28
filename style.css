@@ -3355,3 +3355,50 @@ MOBILE HERO STATS ONE ROW
 }
 
 }
+ /* ==========================
+FINAL HERO BOX COMPACT MOBILE
+========================== */
+
+@media(max-width:600px){
+
+.hero-features,
+.hero-info{
+
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:4px !important;
+    margin-top:20px !important;
+
+}
+
+
+.hero-features div,
+.info-card{
+
+    width:25% !important;
+    min-width:0 !important;
+    padding:6px 2px !important;
+    border-radius:8px !important;
+
+}
+
+
+.hero-features h3,
+.info-card h3{
+
+    font-size:14px !important;
+    margin:0 !important;
+
+}
+
+
+.hero-features p,
+.info-card p{
+
+    font-size:8px !important;
+    line-height:1.1 !important;
+    white-space:nowrap;
+
+}
+
+}
