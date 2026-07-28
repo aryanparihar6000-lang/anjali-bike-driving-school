@@ -63,7 +63,17 @@ certificateID;
 document.getElementById("date").innerHTML =
 today;
 
+// QR CODE
 
+let verifyLink =
+"https://anjali-bike-driving-school.com/verify?id="
++ certificateID;
+
+
+document.getElementById("qrCode").src =
+
+"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="
++ encodeURIComponent(verifyLink);
 
 }
 
