@@ -2427,3 +2427,33 @@ text-align:center;
 }
 
 }
+/* ABOUT IMAGE TWO PHOTO DESIGN */
+
+.about-image{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.about-image img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+
+/* MOBILE ABOUT IMAGE */
+
+@media(max-width:768px){
+
+.about-image{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.about-image img{
+    height:140px;
+}
+
+}
