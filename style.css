@@ -2041,3 +2041,109 @@ FLASH DEAL DESKTOP FIX
 }
 
 }
+/* ==========================
+TRAINING PACKAGES FINAL FIX
+========================== */
+
+/* Desktop */
+@media(min-width:993px){
+
+.courses .course-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    width:100%;
+
+}
+
+.courses .course-card{
+
+    width:100%;
+    padding:25px;
+
+}
+
+.courses .course-card h3{
+
+    font-size:20px;
+
+}
+
+.courses .course-card .price{
+
+    font-size:30px;
+
+}
+
+}
+
+
+/* Tablet */
+@media(max-width:992px){
+
+.courses .course-grid{
+
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+
+}
+
+}
+
+
+/* Mobile */
+@media(max-width:600px){
+
+.courses{
+
+    padding:50px 10px;
+
+}
+
+
+.courses .course-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+
+}
+
+
+.courses .course-card{
+
+    padding:12px 8px;
+
+}
+
+
+.courses .course-card h3{
+
+    font-size:14px;
+
+}
+
+
+.courses .course-card .price{
+
+    font-size:20px;
+
+}
+
+
+.courses .course-card ul{
+
+    display:none;
+
+}
+
+
+.courses .course-card .btn{
+
+    font-size:12px;
+    padding:8px 5px;
+
+}
+
+}
