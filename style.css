@@ -3310,3 +3310,48 @@ section.hero{
 }
 
 }
+/* ==========================
+MOBILE HERO STATS ONE ROW
+========================== */
+
+@media(max-width:600px){
+
+.hero-features,
+.hero-info{
+
+    display:grid !important;
+    grid-template-columns:repeat(4,1fr) !important;
+    gap:5px !important;
+    width:100%;
+
+}
+
+
+.hero-features div,
+.info-card{
+
+    padding:8px 3px !important;
+    min-width:0 !important;
+    border-radius:10px !important;
+
+}
+
+
+.hero-features h3,
+.info-card h3{
+
+    font-size:16px !important;
+    margin-bottom:3px !important;
+
+}
+
+
+.hero-features p,
+.info-card p{
+
+    font-size:10px !important;
+    line-height:1.2 !important;
+
+}
+
+}
