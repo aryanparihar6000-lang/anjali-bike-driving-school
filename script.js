@@ -218,6 +218,57 @@ topBtn.onclick = () => {
 console.log("Premium Website Loaded Successfully");
 
 /* ==========================
+CERTIFICATE VERIFICATION
+========================== */
+
+
+function verifyCertificate(){
+
+
+const enteredID = document.getElementById("verifyID").value;
+
+
+const result = document.getElementById("verifyResult");
+
+
+// Demo Certificate IDs
+
+const validCertificates = [
+
+"ABS12345",
+"ABS2026"
+
+];
+
+
+if(validCertificates.includes(enteredID)){
+
+
+result.innerHTML =
+"✅ Certificate Verified Successfully";
+
+
+result.style.color="#16a34a";
+
+
+}
+
+else{
+
+
+result.innerHTML =
+"❌ Certificate Not Found";
+
+
+result.style.color="#dc2626";
+
+
+}
+
+
+}
+
+/* ==========================
 CERTIFICATE GENERATOR
 ========================== */
 
