@@ -3564,3 +3564,29 @@ HERO FEATURES TEXT + BOX FINAL
 }
 
 }
+/* ==========================
+HERO FEATURES CLEAN TEXT FIX
+========================== */
+
+@media(max-width:600px){
+
+.hero-features div{
+
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+    padding:5px 2px !important;
+
+}
+
+
+.hero-features span{
+
+    color:#0DCAF0 !important;
+    font-size:11px !important;
+    font-weight:800 !important;
+    line-height:1.2 !important;
+
+}
+
+}
