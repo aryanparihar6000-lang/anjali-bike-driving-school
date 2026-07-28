@@ -357,3 +357,73 @@ cursor:pointer;
 background:#8b6508;
 
 }
+
+/* DOWNLOAD BUTTON */
+
+
+.download-btn{
+
+display:block;
+
+margin:40px auto;
+
+padding:15px 35px;
+
+background:#b8860b;
+
+color:white;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+
+
+.download-btn:hover{
+
+background:#8b6508;
+
+transform:translateY(-3px);
+
+}
+
+
+
+/* Hide Button While Printing */
+
+@media print{
+
+
+.generator-form,
+.download-btn{
+
+display:none;
+
+}
+
+
+body{
+
+background:white;
+
+}
+
+
+.certificate{
+
+box-shadow:none;
+
+}
+
+
+}
