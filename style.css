@@ -1656,3 +1656,116 @@ font-size:32px;
 gap:18px;
 
 }
+/* ==========================
+FLASH DEAL MOBILE COMPACT
+========================== */
+
+.deal-grid{
+    gap:12px;
+}
+
+
+.deal-card{
+
+    padding:10px;
+    border-radius:18px;
+
+}
+
+
+.deal-card img{
+
+    height:85px;
+    border-radius:12px;
+    margin-bottom:8px;
+
+}
+
+
+.deal-card h3{
+
+    font-size:16px;
+    margin-bottom:6px;
+
+}
+
+
+.price del{
+
+    font-size:13px;
+
+}
+
+
+.price strong{
+
+    font-size:22px;
+
+}
+
+
+.discount{
+
+    font-size:12px;
+    padding:4px 10px;
+    margin:8px 0;
+
+}
+
+
+.deal-btn{
+
+    padding:8px 12px;
+    font-size:13px;
+
+}
+
+
+.flash-deal{
+
+    padding:45px 10px;
+
+}
+
+
+.flash-deal .section-title h2{
+
+    font-size:26px;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.deal-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:10px;
+
+}
+
+
+.deal-card img{
+
+height:80px;
+
+}
+
+
+.deal-card h3{
+
+font-size:15px;
+
+}
+
+
+.price strong{
+
+font-size:20px;
+
+}
+
+}
