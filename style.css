@@ -1888,3 +1888,43 @@ padding:7px 5px;
     width:auto !important;
     height:auto !important;
 }
+.course-card.featured{
+    overflow:hidden;
+}
+
+.course-card.featured::before{
+    transform:scale(.7);
+}
+@media(max-width:768px){
+
+.courses{
+padding:50px 10px;
+}
+
+.section-title h2{
+font-size:32px;
+}
+
+.course-grid{
+grid-template-columns:repeat(3,1fr);
+gap:8px;
+}
+
+.course-card{
+padding:15px 8px;
+}
+
+.course-card h3{
+font-size:15px;
+}
+
+.price{
+font-size:22px;
+}
+
+.course-card .btn{
+font-size:12px;
+padding:10px 8px;
+}
+
+}
