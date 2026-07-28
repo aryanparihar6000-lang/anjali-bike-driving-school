@@ -291,8 +291,23 @@ return;
 }
 
 
-const certificateID = 
-"ABS" + Math.floor(Math.random()*90000 + 10000);
+const certificateNumber = 
+localStorage.getItem("certificateNumber") || 0;
+
+
+const newCertificateNumber =
+Number(certificateNumber) + 1;
+
+
+localStorage.setItem(
+"certificateNumber",
+newCertificateNumber
+);
+
+
+const certificateID =
+"ABS-2026-" +
+String(newCertificateNumber).padStart(4,"0");
 
 
 const date = new Date().toLocaleDateString("en-IN");
