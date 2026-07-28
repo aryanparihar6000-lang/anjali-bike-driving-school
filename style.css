@@ -177,7 +177,7 @@ url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=c
 
 background-size:cover;
 
-background-position:center;
+background-position:center top;
 
 }
 .hero-content{
@@ -1272,10 +1272,12 @@ box-shadow:0 25px 45px rgba(0,0,0,.15);
 }
 
 .deal-card img{
-width:100%;
-height:180px;
-object-fit:contain;
-margin-bottom:15px;
+    width:100%;
+    height:180px;
+    object-fit:contain;
+    object-position:center;
+    background:#fff;
+    border-radius:15px;
 }
 
 .deal-card h3{
