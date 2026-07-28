@@ -449,6 +449,20 @@ Date: ${date}
 
 <br>
 
+<div style="display:flex;justify-content:space-around;margin-top:40px;">
+
+<div>
+_____________<br>
+Instructor
+</div>
+
+
+<div>
+_____________<br>
+Director
+</div>
+
+</div>
 
 <h3>
 Authorized Signature
