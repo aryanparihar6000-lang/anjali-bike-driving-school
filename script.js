@@ -309,6 +309,30 @@ const certificateID =
 "ABS-2026-" +
 String(newCertificateNumber).padStart(4,"0");
 
+   // Save Certificate Record
+
+const certificateData = {
+
+id: certificateID,
+
+name: name,
+
+course: course,
+
+duration: duration,
+
+date: date
+
+};
+
+
+localStorage.setItem(
+
+certificateID,
+
+JSON.stringify(certificateData)
+
+);
 
 const date = new Date().toLocaleDateString("en-IN");
 
