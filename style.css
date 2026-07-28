@@ -2217,3 +2217,62 @@ TRAINING PACKAGES FINAL FIX
     border-radius:50px;
 
 }
+/* ==========================
+   BIG BOOKING FORM FORCE FIX
+========================== */
+
+section.booking{
+    padding:120px 20px !important;
+}
+
+
+.booking .container{
+    max-width:1100px !important;
+}
+
+
+.booking-form{
+    width:100% !important;
+    max-width:900px !important;
+    margin:auto !important;
+    padding:40px !important;
+
+    background:#ffffff !important;
+    border-radius:25px !important;
+
+    box-shadow:0 20px 50px rgba(0,0,0,0.15) !important;
+}
+
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+
+    width:100% !important;
+    height:55px !important;
+
+    padding:15px 20px !important;
+
+    font-size:16px !important;
+
+    border-radius:15px !important;
+
+}
+
+
+.booking-form textarea{
+
+    height:160px !important;
+
+}
+
+
+.booking-form button{
+
+    height:60px !important;
+
+    font-size:20px !important;
+
+    border-radius:50px !important;
+
+}
