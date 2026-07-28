@@ -576,62 +576,45 @@ height:220px;
    MOBILE MENU
 ========================== */
 
-.menu-toggle{
-
 display:none;
-
-font-size:32px;
-
+font-size:30px;
 cursor:pointer;
-
-color:#fff;
-
+color:#222;
+font-weight:bold;
 }
 
 @media(max-width:992px){
 
 .menu-toggle{
-
 display:block;
-
 }
 
 nav{
-
 position:absolute;
-
 top:80px;
-
 left:0;
-
 width:100%;
-
-background:#111;
-
+background:#fff;
 display:none;
-
-padding:25px;
-
+padding:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
 nav.active{
-
 display:block;
-
-animation:fade .4s;
-
 }
 
 nav ul{
-
 flex-direction:column;
+gap:20px;
+}
 
-gap:25px;
-
+nav a{
+color:#222;
+display:block;
 }
 
 }
-
 @keyframes fadeUp{
 
 from{
