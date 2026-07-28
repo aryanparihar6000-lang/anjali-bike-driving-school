@@ -2861,3 +2861,55 @@ footer .footer-content p{
 }
 
 }
+/* ==========================
+   MOBILE FOOTER HARD FIX
+========================== */
+
+@media(max-width:768px){
+
+footer{
+    padding:5px !important;
+    margin:0 !important;
+    height:auto !important;
+    min-height:0 !important;
+}
+
+
+footer .footer-content{
+    margin:0 !important;
+    padding:0 !important;
+}
+
+
+footer h2,
+footer h3{
+    margin:0 !important;
+    padding:0 !important;
+    font-size:12px !important;
+    line-height:1.1 !important;
+}
+
+
+footer p{
+    margin:0 !important;
+    padding:0 !important;
+    font-size:9px !important;
+    line-height:1.2 !important;
+}
+
+
+.footer-buttons{
+    margin:2px 0 !important;
+    padding:0 !important;
+}
+
+
+.footer-buttons a{
+    display:inline-block;
+    padding:3px 8px !important;
+    margin:1px !important;
+    font-size:9px !important;
+    line-height:1 !important;
+}
+
+}
