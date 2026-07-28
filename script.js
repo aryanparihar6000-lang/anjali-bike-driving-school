@@ -402,9 +402,37 @@ font-weight:bold;
 <div class="certificate-box">
 
 
+<div style="
+width:90px;
+height:90px;
+margin:auto;
+border-radius:50%;
+background:#d62828;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:45px;
+color:white;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+">
+
+🏍️
+
+</div>
+
+
 <h1>
-🏍️ Anjali Bike Driving School
+Anjali Bike Driving School
 </h1>
+
+
+<p style="
+font-size:18px;
+color:#d62828;
+font-weight:700;
+">
+Ride Safe • Ride Smart
+</p>
 
 
 <h2>
