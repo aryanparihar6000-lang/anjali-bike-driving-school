@@ -3875,3 +3875,19 @@ font-size:16px;
 }
 
 }
+
+/* ==========================
+CERTIFICATE LOGO DESIGN
+========================== */
+
+.certificate-logo{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.certificate-logo img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    border-radius:50%;
+}
