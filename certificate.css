@@ -1,0 +1,279 @@
+/* =================================
+   ANJALI BIKE DRIVING SCHOOL
+   PREMIUM CERTIFICATE DESIGN
+================================= */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#111;
+
+    font-family:"Poppins",Arial,sans-serif;
+
+}
+
+
+/* Main Area */
+
+.certificate-page{
+
+    width:100%;
+
+    padding:40px 20px;
+
+}
+
+
+
+/* Certificate Box */
+
+.certificate{
+
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #fff,
+    #faf5e8
+    );
+
+
+    padding:60px;
+
+    text-align:center;
+
+
+    border:12px solid #c9a227;
+
+
+    border-radius:20px;
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.5);
+
+
+    position:relative;
+
+}
+
+
+
+/* Inner Gold Border */
+
+.certificate:before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:20px;
+
+    border:2px solid #c9a227;
+
+    pointer-events:none;
+
+}
+
+
+
+/* Logo */
+
+.logo{
+
+    font-size:55px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+/* School Name */
+
+.certificate h2{
+
+    font-size:28px;
+
+    color:#111;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* Certificate Heading */
+
+.certificate h1{
+
+    font-size:55px;
+
+    color:#b8860b;
+
+    letter-spacing:5px;
+
+}
+
+
+.certificate h3{
+
+    font-size:24px;
+
+    color:#333;
+
+    margin:10px 0 30px;
+
+}
+
+
+
+/* Text */
+
+.certificate p{
+
+    font-size:18px;
+
+    color:#555;
+
+    margin:15px 0;
+
+}
+
+
+
+/* Student Name */
+
+.certificate h4{
+
+    font-size:42px;
+
+    font-family:Georgia,serif;
+
+    color:#111;
+
+    margin:20px 0;
+
+    text-transform:uppercase;
+
+}
+
+
+
+/* Details */
+
+
+.details{
+
+    margin-top:30px;
+
+    font-size:16px;
+
+}
+
+
+.details span{
+
+    font-weight:700;
+
+    color:#b8860b;
+
+}
+
+
+
+/* Signature */
+
+.signature{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    margin-top:70px;
+
+    font-weight:600;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+
+.certificate{
+
+    padding:35px 15px;
+
+    border-width:8px;
+
+}
+
+
+
+.certificate h1{
+
+    font-size:35px;
+
+}
+
+
+.certificate h2{
+
+    font-size:18px;
+
+}
+
+
+
+.certificate h4{
+
+    font-size:28px;
+
+}
+
+
+
+.certificate p{
+
+    font-size:14px;
+
+}
+
+
+
+.signature{
+
+    margin-top:40px;
+
+    font-size:12px;
+
+}
+
+
+}
