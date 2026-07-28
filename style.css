@@ -1882,3 +1882,9 @@ padding:7px 5px;
 }
 
 }
+.featured::before{
+    font-size:12px !important;
+    padding:8px 15px !important;
+    width:auto !important;
+    height:auto !important;
+}
