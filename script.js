@@ -468,6 +468,22 @@ Director
 Authorized Signature
 </h3>
 
+<br>
+
+<button onclick="window.print()" 
+style="
+padding:15px 30px;
+background:#d62828;
+color:white;
+border:none;
+border-radius:50px;
+font-size:18px;
+cursor:pointer;
+">
+
+Download / Print Certificate
+
+</button>
 
 </div>
 
