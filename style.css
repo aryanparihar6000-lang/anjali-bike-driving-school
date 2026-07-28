@@ -2215,3 +2215,7 @@ font-size:20px;
 border-radius:50px;
 
 }
+/* FIX HEADER SCROLL */
+header{
+    position:relative !important;
+}
