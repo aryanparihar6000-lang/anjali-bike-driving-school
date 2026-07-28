@@ -2939,3 +2939,53 @@ footer .copyright{
 }
 
 }
+/* ==========================
+   FOOTER MOBILE FINAL COMPACT
+========================== */
+
+@media(max-width:768px){
+
+footer{
+    padding:5px 5px !important;
+    margin-top:0 !important;
+}
+
+
+footer .container{
+    width:100% !important;
+    padding:0 !important;
+}
+
+
+footer h2{
+    font-size:12px !important;
+    margin:0 !important;
+    line-height:1.2 !important;
+}
+
+
+footer p{
+    font-size:9px !important;
+    margin:2px 0 !important;
+    line-height:1.2 !important;
+}
+
+
+.footer-buttons{
+    margin:3px 0 !important;
+}
+
+
+.footer-buttons a{
+    padding:4px 10px !important;
+    margin:2px !important;
+    font-size:9px !important;
+}
+
+
+footer .copyright{
+    font-size:8px !important;
+    margin:0 !important;
+}
+
+}
