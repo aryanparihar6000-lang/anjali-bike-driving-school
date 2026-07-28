@@ -615,6 +615,31 @@ Download / Print Certificate
 
 }
 
+// ==========================
+// DOWNLOAD CERTIFICATE PDF
+// ==========================
+
+function downloadCertificate(){
+
+const certificate = document.querySelector(".certificate-preview");
+
+if(!certificate){
+
+alert("Please generate certificate first");
+
+return;
+
+}
+
+
+html2pdf()
+
+.from(certificate)
+
+.save("Anjali-Bike-Driving-School-Certificate.pdf");
+
+}
+
 /* ==========================
 MOBILE MENU
 ========================== */
