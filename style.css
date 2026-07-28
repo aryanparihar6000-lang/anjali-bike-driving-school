@@ -2769,3 +2769,57 @@ footer h3{
 }
 
 }
+/* ==========================
+   FOOTER ULTRA COMPACT
+========================== */
+
+footer{
+    padding:8px 10px !important;
+    margin-top:5px !important;
+}
+
+
+footer .footer-content h3{
+    font-size:15px !important;
+    margin:2px 0 !important;
+}
+
+
+footer .footer-content p{
+    font-size:10px !important;
+    margin:1px 0 !important;
+}
+
+
+.footer-buttons{
+    margin:3px 0 !important;
+}
+
+
+.footer-buttons a{
+    padding:5px 10px !important;
+    margin:2px !important;
+    font-size:10px !important;
+}
+
+
+@media(max-width:768px){
+
+footer{
+    padding:6px 5px !important;
+}
+
+footer .footer-content h3{
+    font-size:14px !important;
+}
+
+footer .footer-content p{
+    font-size:9px !important;
+}
+
+.footer-buttons a{
+    padding:5px 8px !important;
+    font-size:9px !important;
+}
+
+}
