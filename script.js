@@ -216,6 +216,179 @@ topBtn.onclick = () => {
 };
 
 console.log("Premium Website Loaded Successfully");
+
+/* ==========================
+CERTIFICATE GENERATOR
+========================== */
+
+
+function generateCertificate(){
+
+const name = document.getElementById("nameInput").value;
+
+const course = document.getElementById("courseInput").value;
+
+const duration = document.getElementById("durationInput").value;
+
+
+if(name=="" || course==""){
+
+alert("Please enter student details");
+
+return;
+
+}
+
+
+const certificateID = 
+"ABS" + Math.floor(Math.random()*90000 + 10000);
+
+
+const date = new Date().toLocaleDateString("en-IN");
+
+
+const certificateWindow = window.open("","_blank");
+
+
+certificateWindow.document.write(`
+
+<html>
+
+<head>
+
+<title>Certificate - Anjali Bike Driving School</title>
+
+
+<style>
+
+body{
+
+font-family:Arial;
+background:#f5f7fb;
+padding:40px;
+text-align:center;
+
+}
+
+
+.certificate-box{
+
+background:white;
+border:10px solid #d62828;
+padding:50px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+}
+
+
+h1{
+
+color:#d62828;
+font-size:35px;
+
+}
+
+
+h2{
+
+font-size:30px;
+color:#222;
+
+}
+
+
+p{
+
+font-size:18px;
+
+}
+
+
+.id{
+
+margin-top:30px;
+font-weight:bold;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="certificate-box">
+
+
+<h1>
+🏍️ Anjali Bike Driving School
+</h1>
+
+
+<h2>
+Certificate of Completion
+</h2>
+
+
+<p>
+This certificate is proudly presented to
+</p>
+
+
+<h2>
+${name}
+</h2>
+
+
+<p>
+For successfully completing
+</p>
+
+
+<h3>
+${course}
+</h3>
+
+
+<p>
+Training Duration: ${duration}
+</p>
+
+
+<p class="id">
+Certificate ID: ${certificateID}
+</p>
+
+
+<p>
+Date: ${date}
+</p>
+
+
+<br>
+
+
+<h3>
+Authorized Signature
+</h3>
+
+
+</div>
+
+
+</body>
+
+</html>
+
+`);
+
+
+}
+
 /* ==========================
 MOBILE MENU
 ========================== */
