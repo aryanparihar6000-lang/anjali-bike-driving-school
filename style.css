@@ -326,7 +326,7 @@ CONTACT
 
 .contact{
 
-padding:100px 20px;
+padding:60px 20px;
 
 background:#f5f7fb;
 
@@ -334,7 +334,7 @@ background:#f5f7fb;
 .contact-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
+gap:20px;
 align-items:center;
 }
 
@@ -342,7 +342,7 @@ align-items:center;
 
 background:#ffffff;
 
-padding:40px;
+padding:25px;
 
 border-radius:20px;
 
@@ -2240,4 +2240,13 @@ grid-template-columns:repeat(4,1fr);
 grid-template-columns:repeat(3,1fr);
 }
 
+}
+.contact-card h3{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.contact-card p,
+.contact-card a{
+    font-size:15px;
 }
