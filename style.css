@@ -3759,3 +3759,119 @@ padding:12px;
 
 
 }
+
+/* ==========================
+CERTIFICATE VERIFICATION
+========================== */
+
+
+.certificate-verify{
+
+padding:80px 20px;
+background:#ffffff;
+
+}
+
+
+.verify-box{
+
+max-width:600px;
+margin:auto;
+
+background:#f5f7fb;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+text-align:center;
+
+}
+
+
+.verify-box input{
+
+width:100%;
+
+padding:15px 20px;
+
+border:1px solid #ddd;
+
+border-radius:50px;
+
+font-size:16px;
+
+margin-bottom:20px;
+
+outline:none;
+
+}
+
+
+.verify-box input:focus{
+
+border-color:#d62828;
+
+box-shadow:0 0 10px rgba(214,40,40,.15);
+
+}
+
+
+.verify-box button{
+
+border:none;
+
+cursor:pointer;
+
+}
+
+
+#verifyResult{
+
+margin-top:25px;
+
+font-size:20px;
+
+font-weight:700;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.certificate-verify{
+
+padding:50px 15px;
+
+}
+
+
+.verify-box{
+
+padding:20px;
+
+border-radius:18px;
+
+}
+
+
+.verify-box input{
+
+font-size:14px;
+
+padding:12px 15px;
+
+}
+
+
+#verifyResult{
+
+font-size:16px;
+
+}
+
+}
