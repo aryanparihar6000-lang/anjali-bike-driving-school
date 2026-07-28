@@ -3663,3 +3663,35 @@ MOBILE REVIEW TITLE SMALL
 }
 
 }
+/* ==========================
+MOBILE REVIEWS TITLE COMPACT
+========================== */
+
+@media(max-width:600px){
+
+.reviews{
+    padding:45px 10px !important;
+}
+
+.reviews .section-title{
+    margin-bottom:15px !important;
+}
+
+.reviews .section-title span{
+    font-size:10px !important;
+    font-weight:700 !important;
+}
+
+.reviews .section-title h2{
+    font-size:22px !important;
+    line-height:1.2 !important;
+    margin:5px 0 !important;
+}
+
+.reviews .section-title p{
+    font-size:12px !important;
+    line-height:1.3 !important;
+    margin:0 !important;
+}
+
+}
