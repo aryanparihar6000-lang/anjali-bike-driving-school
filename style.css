@@ -1164,7 +1164,7 @@ TOP SLIDING INFO BAR
 
 width:100%;
 
-height:40px;
+height:30px;
 
 background:#E8F4FF;
 
@@ -1204,8 +1204,8 @@ animation:marquee 25s linear infinite;
 
 display:inline-flex;
 align-items:center;
-margin-right:60px;
-font-size:15px;
+margin-right:40px;
+font-size:12px;
 font-weight:600;
 color:#222;
 
@@ -1936,6 +1936,29 @@ font-size:22px;
 .course-card .btn{
 font-size:12px;
 padding:10px 8px;
+}
+
+}
+@media(max-width:768px){
+
+.logo h2{
+font-size:22px;
+}
+
+.logo span{
+font-size:11px;
+}
+
+header .container{
+
+padding:10px 0;
+
+}
+
+.logo{
+
+gap:8px;
+
 }
 
 }
