@@ -1,39 +1,68 @@
 /* ==================================
-   ANJALI BIKE DRIVING SCHOOL
    CERTIFICATE GENERATOR
 ================================== */
 
 
-// Student Details
-
-let student = "RAHUL SHARMA";
-
-let course = "14 Days Bike Riding Training";
+function generateCertificate(){
 
 
-// Certificate ID Generate
-
-let id = "ABDS-" + new Date().getFullYear() + "-" + Math.floor(1000 + Math.random() * 9000);
-
-
-// Current Date
-
-let today = new Date();
-
-let date = today.toLocaleDateString("en-IN");
+let name =
+document.getElementById("inputName").value;
 
 
 
-// Add Data To Certificate
-
-document.getElementById("studentName").innerHTML = student;
-
-document.getElementById("courseName").innerHTML = course;
-
-document.getElementById("certificateId").innerHTML = id;
-
-document.getElementById("date").innerHTML = date;
+let course =
+document.getElementById("inputCourse").value;
 
 
 
-console.log("Certificate Generated Successfully");
+if(name==""){
+
+alert("Please Enter Student Name");
+
+return;
+
+}
+
+
+
+// Certificate ID
+
+let certificateID =
+"ABDS-" +
+new Date().getFullYear() +
+"-" +
+Math.floor(1000 + Math.random()*9000);
+
+
+
+
+// Date
+
+let today =
+new Date().toLocaleDateString("en-IN");
+
+
+
+
+// Update Certificate
+
+
+document.getElementById("studentName").innerHTML =
+name;
+
+
+document.getElementById("courseName").innerHTML =
+course;
+
+
+document.getElementById("certificateId").innerHTML =
+certificateID;
+
+
+document.getElementById("date").innerHTML =
+today;
+
+
+
+}
