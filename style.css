@@ -1962,3 +1962,12 @@ gap:8px;
 }
 
 }
+@media(max-width:768px){
+
+.hero-call{
+
+display:none;
+
+}
+
+}
