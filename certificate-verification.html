@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Certificate Verification - Anjali Bike Driving School
+</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+
+<section class="certificate-verify-page">
+
+
+<div class="container">
+
+
+<div class="section-title">
+
+<span>VERIFY</span>
+
+<h2>
+Certificate Verification
+</h2>
+
+<p>
+Verify the authenticity of Anjali Bike Driving School certificate.
+</p>
+
+</div>
+
+
+
+<div class="verify-card">
+
+
+<input 
+type="text"
+id="certificateSearch"
+placeholder="Enter Certificate ID">
+
+
+<button 
+class="btn"
+onclick="checkCertificate()">
+
+Verify Certificate
+
+</button>
+
+
+
+<div id="verifyBox">
+
+
+<h3>
+Certificate Details
+</h3>
+
+
+<p>
+Certificate ID:
+<span id="verifyID">
+-
+</span>
+</p>
+
+
+<p>
+Status:
+<span id="status">
+-
+</span>
+</p>
+
+
+<p>
+Student:
+<span id="verifyName">
+-
+</span>
+</p>
+
+
+<p>
+Course:
+<span id="verifyCourse">
+-
+</span>
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<script>
+
+
+function checkCertificate(){
+
+
+let id = document.getElementById("certificateSearch").value;
+
+
+
+if(id==""){
+
+alert("Please enter Certificate ID");
+
+return;
+
+}
+
+
+// Demo Verification
+
+document.getElementById("verifyID").innerHTML=id;
+
+
+document.getElementById("status").innerHTML="Verified ✅";
+
+
+document.getElementById("verifyName").innerHTML="Training Student";
+
+
+document.getElementById("verifyCourse").innerHTML="Bike Training";
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
