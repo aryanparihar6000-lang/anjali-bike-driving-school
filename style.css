@@ -2147,3 +2147,73 @@ TRAINING PACKAGES FINAL FIX
 }
 
 }
+/* ==========================
+   BOOKING FORM BIGGER DESIGN
+========================== */
+
+.booking .container{
+    max-width:1000px;
+}
+
+
+.booking-form{
+
+    max-width:850px;
+    margin:auto;
+    padding:35px;
+
+    background:#ffffff;
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.10);
+
+}
+
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+
+    width:100%;
+    padding:16px 20px;
+
+    font-size:16px;
+
+    border:1px solid #ddd;
+
+    border-radius:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus{
+
+    border-color:#d62828;
+
+    box-shadow:0 0 10px rgba(214,40,40,.15);
+
+}
+
+
+.booking-form textarea{
+
+    height:150px;
+
+}
+
+
+.booking-form button{
+
+    padding:18px;
+
+    font-size:20px;
+
+    border-radius:50px;
+
+}
