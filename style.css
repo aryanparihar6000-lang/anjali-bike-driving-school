@@ -3450,3 +3450,45 @@ HERO INFO MOBILE SINGLE ROW FIX
 }
 
 }
+/* ==========================
+HERO FEATURES MOBILE ONE ROW
+========================== */
+
+@media(max-width:600px){
+
+.hero-features{
+
+    display:grid !important;
+    grid-template-columns:repeat(4,1fr) !important;
+    gap:5px !important;
+    margin-top:25px !important;
+
+}
+
+
+.hero-features div{
+
+    padding:8px 3px !important;
+    border-radius:10px !important;
+    min-width:0 !important;
+
+}
+
+
+.hero-features h3{
+
+    font-size:15px !important;
+    margin-bottom:3px !important;
+
+}
+
+
+.hero-features span{
+
+    font-size:8px !important;
+    line-height:1.1 !important;
+    display:block;
+
+}
+
+}
