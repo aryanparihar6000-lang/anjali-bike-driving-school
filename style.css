@@ -1967,3 +1967,77 @@ display:none;
 }
 
 }
+/* =========================
+FLASH DEAL DESKTOP FIX
+========================= */
+
+@media(min-width:993px){
+
+.flash-deal .container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.flash-deal .deal-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    width:100%;
+
+}
+
+.flash-deal .deal-card{
+
+    width:100%;
+    padding:15px;
+
+}
+
+.flash-deal .deal-card img{
+
+    height:130px;
+
+}
+
+.flash-deal .deal-card h3{
+
+    font-size:18px;
+
+}
+
+.flash-deal .price strong{
+
+    font-size:26px;
+
+}
+
+}
+
+
+/* TABLET + MOBILE */
+
+@media(max-width:992px){
+
+.flash-deal .deal-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/* SMALL MOBILE */
+
+@media(max-width:600px){
+
+.flash-deal .deal-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:10px;
+
+}
+
+}
