@@ -502,49 +502,41 @@ Call Now
                 placeholder="10 Digit Mobile Number"
                 required>
             
-       <select name="course_type" required>
-    <option value="">Select Training Type</option>
-    <option value="Bike Training">🏍️ Bike Training</option>
-    <option value="Scooty Training">🛵 Scooty Training</option>
-    <option value="Ladies Special Training">👩 Ladies Special Training</option>
+  <div class="form-row">
+
+<select name="course_type" required>
+    <option value="">Training Type</option>
+    <option value="Bike Training">🏍️ Bike</option>
+    <option value="Scooty Training">🛵 Scooty</option>
+    <option value="Ladies Special Training">👩 Ladies</option>
 </select>
+
 
 <input
 type="date"
 name="start_date"
 required>
 
+
 <select name="duration" required>
-
-<option value="">
-Select Training Duration
-</option>
-
-<option value="7 Days">
-7 Days
-</option>
-
-<option value="14 Days">
-14 Days
-</option>
-
+    <option value="">Duration</option>
+    <option value="7 Days">7 Days</option>
+    <option value="14 Days">14 Days</option>
 </select>
+
 
 <select name="time_slot" required>
 
-    <option value="">Preferred Time</option>
-
+    <option value="">Time Slot</option>
     <option value="7 AM - 9 AM">7 AM - 9 AM</option>
-
     <option value="9 AM - 12 PM">9 AM - 12 PM</option>
-
     <option value="12 PM - 3 PM">12 PM - 3 PM</option>
-
     <option value="3 PM - 6 PM">3 PM - 6 PM</option>
-
     <option value="6 PM - 10 PM">6 PM - 10 PM</option>
 
 </select>
+
+</div>
             <textarea
                 name="message"
                 placeholder="Any Message"></textarea>
