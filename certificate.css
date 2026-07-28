@@ -441,3 +441,29 @@ object-fit:contain;
 margin-bottom:15px;
 
 }
+
+/* QR CODE */
+
+.qr{
+
+margin-top:30px;
+
+}
+
+
+.qr img{
+
+width:120px;
+
+height:120px;
+
+}
+
+
+.qr p{
+
+font-size:14px;
+
+color:#555;
+
+}
