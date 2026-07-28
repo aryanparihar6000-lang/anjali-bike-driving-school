@@ -593,13 +593,13 @@ height:220px;
    MOBILE MENU
 ========================== */
 
-display:none;
-font-size:30px;
-cursor:pointer;
-color:#222;
-font-weight:bold;
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+    color:#222;
+    font-weight:bold;
 }
-
 @media(max-width:992px){
 
 .menu-toggle{
