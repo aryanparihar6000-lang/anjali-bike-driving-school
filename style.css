@@ -2595,3 +2595,49 @@ font-size:16px;
 }
 
 }
+/* ==========================
+COMPACT MOBILE REVIEWS
+========================== */
+
+@media(max-width:600px){
+
+.reviews{
+    padding:35px 10px;
+}
+
+
+.review-grid{
+    gap:10px;
+}
+
+
+.review-card{
+    padding:12px 10px;
+    border-radius:15px;
+}
+
+
+.stars{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+
+.review-card p{
+    font-size:12px;
+    line-height:1.4;
+    margin-bottom:10px;
+}
+
+
+.review-card h3{
+    font-size:14px;
+    margin-bottom:3px;
+}
+
+
+.review-card span{
+    font-size:11px;
+}
+
+}
