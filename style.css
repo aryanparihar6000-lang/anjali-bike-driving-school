@@ -2712,3 +2712,60 @@ footer{
 }
 
 }
+/* ==========================
+   FOOTER FINAL SMALL FIX
+========================== */
+
+footer{
+    padding:15px 10px !important;
+    margin-top:10px !important;
+    min-height:0 !important;
+}
+
+
+footer .footer-content{
+    padding:0 !important;
+}
+
+
+footer h2,
+footer h3{
+    font-size:18px !important;
+    margin:5px 0 !important;
+}
+
+
+footer p{
+    font-size:12px !important;
+    margin:3px 0 !important;
+}
+
+
+.footer-buttons{
+    margin:5px 0 !important;
+}
+
+
+.footer-buttons a{
+    padding:8px 15px !important;
+    margin:3px !important;
+    font-size:12px !important;
+}
+
+
+@media(max-width:768px){
+
+footer{
+    padding:12px 8px !important;
+}
+
+footer h2,
+footer h3{
+    font-size:16px !important;
+}
+
+.footer-buttons a{
+    padding:7px 12px !important;
+}
+
+}
