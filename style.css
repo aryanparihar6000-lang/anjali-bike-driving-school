@@ -3150,3 +3150,98 @@ grid-template-columns:1fr 1fr;
 }
 
 }
+/* ==========================
+MOBILE HERO COMPACT FINAL
+========================== */
+
+@media(max-width:600px){
+
+.hero{
+
+    min-height:70vh;
+    padding:70px 15px 40px;
+
+    background-position:center;
+
+}
+
+
+.hero h1{
+
+    font-size:26px;
+    line-height:1.2;
+    margin-bottom:12px;
+
+}
+
+
+.hero-text{
+
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:20px;
+
+}
+
+
+.hero-buttons{
+
+    gap:10px;
+
+}
+
+
+.hero-buttons .btn{
+
+    padding:10px 20px;
+    font-size:14px;
+    width:auto;
+
+}
+
+
+/* WhatsApp button size */
+
+.hero-buttons .whatsapp{
+
+    padding:10px 20px;
+
+}
+
+
+/* Hero badge/tag */
+
+.tag,
+.hero-badge{
+
+    padding:6px 14px;
+    font-size:12px;
+    margin-bottom:15px;
+
+}
+
+
+/* Hero bottom cards hide on mobile */
+
+.hero-features,
+.hero-info{
+
+    margin-top:25px;
+
+}
+
+.info-card{
+
+    min-width:160px;
+    padding:15px;
+
+}
+
+
+.info-card h3{
+
+    font-size:22px;
+
+}
+
+}
