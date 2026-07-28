@@ -66,3 +66,16 @@ today;
 
 
 }
+
+// ===============================
+// DOWNLOAD CERTIFICATE PDF
+// ===============================
+
+
+function downloadCertificate(){
+
+
+window.print();
+
+
+}
