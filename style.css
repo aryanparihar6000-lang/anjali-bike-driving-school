@@ -2105,46 +2105,50 @@ TRAINING PACKAGES FINAL FIX
 
 
 .courses .course-grid{
-
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:10px;
-
 }
-
 
 .courses .course-card{
-
     padding:12px 8px;
-
 }
-
 
 .courses .course-card h3{
-
     font-size:14px;
-
 }
-
 
 .courses .course-card .price{
-
     font-size:20px;
-
 }
-
 
 .courses .course-card ul{
-
     display:none;
+}
+
+.courses .course-card .btn{
+    font-size:12px;
+    padding:8px 5px;
+}
 
 }
 
+/* ==========================
+FINAL FLASH DEAL FIX
+========================== */
 
-.courses .course-card .btn{
+@media(min-width:993px){
 
-    font-size:12px;
-    padding:8px 5px;
+.flash-deal .deal-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    width:100%;
+}
+
+.flash-deal .deal-card{
+    width:100%;
+}
 
 }
 
@@ -2218,4 +2222,20 @@ border-radius:50px;
 /* FIX HEADER SCROLL */
 header{
     position:relative !important;
+}
+
+header{
+position:relative !important;
+}
+
+@media(min-width:993px){
+
+.flash-deal .deal-grid{
+grid-template-columns:repeat(4,1fr);
+}
+
+.courses .course-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
 }
