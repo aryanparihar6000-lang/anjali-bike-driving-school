@@ -3666,3 +3666,96 @@ MOBILE REVIEWS TITLE COMPACT
 }
 
 }
+
+/* ==========================
+CERTIFICATE SECTION
+========================== */
+
+.certificate{
+
+padding:80px 20px;
+background:#f5f7fb;
+
+}
+
+
+.certificate-form{
+
+max-width:600px;
+margin:auto;
+background:#fff;
+padding:35px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+display:flex;
+flex-direction:column;
+gap:18px;
+
+}
+
+
+.certificate-form input,
+.certificate-form select{
+
+width:100%;
+padding:15px;
+
+border:1px solid #ddd;
+border-radius:15px;
+
+font-size:16px;
+
+outline:none;
+
+}
+
+
+.certificate-form input:focus,
+.certificate-form select:focus{
+
+border-color:#d62828;
+
+box-shadow:0 0 10px rgba(214,40,40,.15);
+
+}
+
+
+.certificate-form .btn{
+
+border:none;
+cursor:pointer;
+font-size:17px;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.certificate{
+
+padding:50px 15px;
+
+}
+
+
+.certificate-form{
+
+padding:20px;
+border-radius:18px;
+
+}
+
+
+.certificate-form input,
+.certificate-form select{
+
+font-size:14px;
+padding:12px;
+
+}
+
+
+}
