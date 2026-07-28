@@ -2989,3 +2989,56 @@ footer .copyright{
 }
 
 }
+/* ==========================
+   MOBILE BOOKING FORM COMPACT
+========================== */
+
+@media(max-width:768px){
+
+.booking{
+    padding:40px 10px !important;
+}
+
+
+.booking .container{
+    width:100% !important;
+}
+
+
+.booking-form{
+
+    padding:15px !important;
+    gap:10px !important;
+    border-radius:15px !important;
+
+}
+
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+
+    padding:10px 12px !important;
+    height:42px !important;
+    font-size:14px !important;
+    border-radius:10px !important;
+
+}
+
+
+.booking-form textarea{
+
+    height:80px !important;
+
+}
+
+
+.booking-form button{
+
+    height:45px !important;
+    padding:10px !important;
+    font-size:15px !important;
+
+}
+
+}
