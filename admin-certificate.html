@@ -1,22 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>
-Admin Certificate Generator - Anjali Bike Driving School
-</title>
-
+<title>Admin Certificate Generator - Anjali Bike Driving School</title>
 
 <link rel="stylesheet" href="style.css">
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
 
 </head>
 
@@ -24,42 +13,32 @@ Admin Certificate Generator - Anjali Bike Driving School
 <body>
 
 
-<section class="admin-certificate">
+<section class="admin-panel">
 
 
-<div class="container">
+<div class="admin-box">
 
 
-<div class="section-title">
+<h1>
+🏆 Admin Certificate Generator
+</h1>
 
-<span>ADMIN PANEL</span>
-
-<h2>
-Certificate Generator
-</h2>
 
 <p>
-Create student training certificates
+Generate student training certificates
 </p>
-
-</div>
-
-
-
-<div class="certificate-form">
 
 
 <input 
 type="text"
-id="studentName"
-placeholder="Enter Student Name">
+id="inputName"
+placeholder="Student Name">
 
 
-
-<select id="studentCourse">
+<select id="inputCourse">
 
 <option value="">
-Select Training Course
+Select Course
 </option>
 
 <option>
@@ -77,114 +56,29 @@ Ladies Special Training
 </select>
 
 
-
 <input 
 type="text"
-id="trainingDuration"
+id="inputDuration"
 placeholder="Training Duration">
 
 
-
-<input 
-type="text"
-id="certificateID"
-placeholder="Certificate ID"
-readonly>
-
-
-<button class="btn" onclick="createCertificate()">
+<button onclick="generateCertificate()">
 
 Generate Certificate
 
 </button>
 
 
-
 </div>
 
 
-</div>
-
-<h3>
-Authorized Signature
-</h3>
-
-<p>
-Anjali Bike Driving School
-</p>
-
-</div>
-
-
-</div>
-
-
-<button 
-class="btn download-btn"
-onclick="downloadAdminCertificate()">
-
-Download Certificate PDF
-
-</button>
-  
 </section>
 
-<script>
-
-function createCertificate(){
-
-let name = document.getElementById("studentName").value;
-
-let course = document.getElementById("studentCourse").value;
-
-let duration = document.getElementById("trainingDuration").value;
-
-let id = document.getElementById("certificateID").value;
 
 
-if(name=="" || course=="" || duration=="" || id==""){
-
-alert("Please fill all details");
-
-return;
-
-}
+<script src="script.js"></script>
 
 
-document.getElementById("showName").innerHTML = name;
-
-document.getElementById("showCourse").innerHTML = course;
-
-document.getElementById("showDuration").innerHTML = duration;
-
-document.getElementById("showID").innerHTML = id;
-
-
-document.getElementById("adminCertificate").style.display="block";
-
-
-}
-
-
-
-function downloadAdminCertificate(){
-
-
-let certificate = document.getElementById("adminCertificate");
-
-
-html2pdf()
-
-.from(certificate)
-
-.save("Anjali-Bike-Driving-School-Certificate.pdf");
-
-
-}
-
-
-</script>
-  
 </body>
 
 </html>
