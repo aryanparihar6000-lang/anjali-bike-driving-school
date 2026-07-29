@@ -18,8 +18,11 @@ Certificate View - Anjali Bike Driving School
 
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  
 <script src="firebase-config.js"></script>
 
+  
 
 </head>
 
@@ -134,9 +137,9 @@ Director
 <br>
 
 
-<button onclick="window.print()" class="btn">
+<button onclick="downloadCertificatePDF()" class="btn">
 
-📄 Print Certificate
+📄 Download PDF
 
 </button>
 
@@ -234,6 +237,46 @@ console.log(error);
 
 }
 
+  function downloadCertificatePDF(){
+
+const element =
+document.getElementById("certificateBox");
+
+
+const options = {
+
+margin:10,
+
+filename:
+"Anjali-Bike-Driving-School-Certificate.pdf",
+
+image:{
+type:"jpeg",
+quality:0.98
+},
+
+html2canvas:{
+scale:2
+},
+
+jsPDF:{
+unit:"mm",
+format:"a4",
+orientation:"landscape"
+}
+
+};
+
+
+html2pdf()
+
+.set(options)
+
+.from(element)
+
+.save();
+
+}
 
 </script>
 
