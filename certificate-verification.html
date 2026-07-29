@@ -14,6 +14,137 @@ Certificate Verification - Anjali Bike Driving School
 
 <link rel="stylesheet" href="style.css">
 
+<style>
+
+body{
+
+background:#f5f7fb;
+
+}
+
+
+.verify-card{
+
+max-width:600px;
+
+margin:30px auto;
+
+background:white;
+
+padding:40px 30px;
+
+border-radius:25px;
+
+border:3px solid #d4af37;
+
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+text-align:center;
+
+}
+
+
+
+.verify-card input{
+
+width:90%;
+
+padding:15px;
+
+border-radius:10px;
+
+border:1px solid #ccc;
+
+font-size:16px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.verify-card h3{
+
+color:#d62828;
+
+font-size:26px;
+
+}
+
+
+
+#verifyBox{
+
+margin-top:30px;
+
+background:#fff8e7;
+
+padding:25px;
+
+border-radius:15px;
+
+border-left:5px solid #d4af37;
+
+}
+
+
+
+#verifyBox p{
+
+font-size:17px;
+
+margin:12px;
+
+color:#333;
+
+}
+
+
+
+#status{
+
+font-weight:bold;
+
+color:#16a34a;
+
+font-size:20px;
+
+}
+
+
+
+.verified-badge{
+
+display:inline-block;
+
+background:#16a34a;
+
+color:white;
+
+padding:8px 20px;
+
+border-radius:50px;
+
+margin:15px;
+
+font-weight:bold;
+
+}
+
+
+
+@media(max-width:600px){
+
+.verify-card{
+
+padding:25px 15px;
+
+}
+
+}
+
+</style>
+  
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
 
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
@@ -165,8 +296,7 @@ data.id;
 
 
 document.getElementById("status").innerHTML =
-"Verified ✅";
-
+'<span class="verified-badge">✅ Certificate Verified</span>';
 
 document.getElementById("verifyName").innerHTML =
 data.name;
@@ -216,29 +346,6 @@ if(certificateID){
 document.getElementById("certificateSearch").value = certificateID;
 
 checkCertificate();
-
-}
-
-
-}
-
-  window.onload = function(){
-
-
-const urlParams = new URLSearchParams(window.location.search);
-
-
-const certificateID = urlParams.get("id");
-
-
-if(certificateID){
-
-
-document.getElementById("certificateSearch").value = certificateID;
-
-
-checkCertificate();
-
 
 }
 
