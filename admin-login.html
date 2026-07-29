@@ -74,11 +74,16 @@ document.getElementById("adminPass").value;
 if(user==="admin" && pass==="anjali123"){
 
 
+localStorage.setItem(
+"adminLogin",
+"true"
+);
+
+
 window.location.href="admin-certificate.html";
 
 
 }
-
 else{
 
 
