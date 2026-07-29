@@ -840,3 +840,41 @@ ${data.date}
 
 
 }
+
+// ==========================
+// DELETE CERTIFICATE
+// ==========================
+
+function deleteCertificate(id){
+
+let confirmDelete = confirm(
+"Delete this certificate?"
+);
+
+
+if(!confirmDelete){
+return;
+}
+
+
+db.collection("certificates")
+.doc(id)
+.delete()
+
+.then(()=>{
+
+alert("Certificate Deleted Successfully ✅");
+
+loadCertificates();
+
+})
+
+.catch((error)=>{
+
+console.log(error);
+
+alert("Delete Failed");
+
+});
+
+}
