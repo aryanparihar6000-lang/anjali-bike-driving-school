@@ -734,7 +734,7 @@ ${id}
 
 }
 
-});
+})
 
 }
 
@@ -771,9 +771,9 @@ list.innerHTML="";
 
 snapshot.forEach((doc)=>{
 
-
 const data = doc.data();
 
+const id = doc.id;
 
 if(
 data.name.toLowerCase().includes(keyword) ||
