@@ -52,6 +52,7 @@ id="certificateSearch"
 placeholder="Enter Certificate ID">
 
 
+
 <button 
 class="btn"
 onclick="checkCertificate()">
@@ -119,12 +120,10 @@ Course:
 
 <script>
 
-
 function checkCertificate(){
 
 
 let id = document.getElementById("certificateSearch").value;
-
 
 
 if(id==""){
@@ -135,8 +134,6 @@ return;
 
 }
 
-
-// Demo Verification
 
 document.getElementById("verifyID").innerHTML=id;
 
@@ -153,8 +150,22 @@ document.getElementById("verifyCourse").innerHTML="Bike Training";
 }
 
 
-</script>
+// QR Auto Fill
 
+const urlParams = new URLSearchParams(window.location.search);
+
+const certificateID = urlParams.get("id");
+
+
+if(certificateID){
+
+document.getElementById("certificateSearch").value = certificateID;
+
+checkCertificate();
+
+}
+
+</script>
 
 
 </body>
