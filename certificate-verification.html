@@ -135,21 +135,39 @@ return;
 }
 
 
-document.getElementById("verifyID").innerHTML=id;
+const certificateData =
+JSON.parse(localStorage.getItem(id));
 
 
-document.getElementById("status").innerHTML="Verified ✅";
+if(certificateData){
 
 
-document.getElementById("verifyName").innerHTML="Training Student";
+document.getElementById("verifyID").innerHTML =
+certificateData.id;
 
 
-document.getElementById("verifyCourse").innerHTML="Bike Training";
+document.getElementById("status").innerHTML =
+"Verified ✅";
+
+
+document.getElementById("verifyName").innerHTML =
+certificateData.name;
+
+
+document.getElementById("verifyCourse").innerHTML =
+certificateData.course;
 
 
 }
+else{
 
 
+document.getElementById("status").innerHTML =
+"Certificate Not Found ❌";
+
+
+}
+  
 // QR Auto Fill
 
 const urlParams = new URLSearchParams(window.location.search);
