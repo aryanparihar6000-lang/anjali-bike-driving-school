@@ -304,23 +304,7 @@ localStorage.setItem(
 newCertificateNumber
 );
 
-// Save Certificate to Firebase Firestore
-
-db.collection("certificates")
-.doc(certificateID)
-.set(certificateData)
-
-.then(()=>{
-
-console.log("Certificate saved to Firebase ✅");
-
-})
-
-.catch((error)=>{
-
-console.log("Firebase Error:", error);
-
-});   
+ 
 
 const certificateID =
 "ABS-2026-" +
@@ -356,6 +340,24 @@ JSON.stringify(certificateData)
 
 );
 
+// Save Certificate to Firebase Firestore
+
+db.collection("certificates")
+.doc(certificateID)
+.set(certificateData)
+
+.then(()=>{
+
+console.log("Certificate saved to Firebase ✅");
+
+})
+
+.catch((error)=>{
+
+console.log("Firebase Error:", error);
+
+});
+   
 // Save Certificate List
 
 let certificateList = 
