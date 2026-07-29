@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Certificate View - Anjali Bike Driving School
+</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+
+<script src="firebase-config.js"></script>
+
+
+</head>
+
+
+<body>
+
+
+<section class="certificate-verify-page">
+
+
+<div class="container">
+
+
+<div class="verify-card" id="certificateBox">
+
+
+<h2>
+🏆 Anjali Bike Driving School
+</h2>
+
+
+<p>
+Ride Safe • Ride Smart
+</p>
+
+
+<h1>
+Certificate of Completion
+</h1>
+
+
+<p>
+This certificate is proudly presented to
+</p>
+
+
+<h2 id="studentName">
+Loading...
+</h2>
+
+
+<p>
+For successfully completing
+</p>
+
+
+<h3 id="courseName">
+-
+</h3>
+
+
+<p>
+Training Duration:
+<span id="duration">
+-
+</span>
+</p>
+
+
+<p>
+Certificate ID:
+<b id="certificateID">
+-
+</b>
+</p>
+
+
+<p>
+Date:
+<span id="certificateDate">
+-
+</span>
+</p>
+
+
+<img id="qrCode"
+style="
+width:120px;
+margin:20px;
+">
+
+
+<p>
+Scan QR Code to Verify
+</p>
+
+
+<br>
+
+
+<div style="
+display:flex;
+justify-content:space-around;
+">
+
+
+<div>
+_____________<br>
+Instructor
+</div>
+
+
+<div>
+_____________<br>
+Director
+</div>
+
+
+</div>
+
+
+<br>
+
+
+<button onclick="window.print()" class="btn">
+
+📄 Print Certificate
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+
+const params =
+new URLSearchParams(window.location.search);
+
+
+const id =
+params.get("id");
+
+
+
+if(id){
+
+
+db.collection("certificates")
+.doc(id)
+.get()
+
+
+.then((doc)=>{
+
+
+if(doc.exists){
+
+
+const data = doc.data();
+
+
+
+document.getElementById("studentName").innerHTML =
+data.name;
+
+
+document.getElementById("courseName").innerHTML =
+data.course;
+
+
+document.getElementById("duration").innerHTML =
+data.duration;
+
+
+document.getElementById("certificateID").innerHTML =
+data.id;
+
+
+document.getElementById("certificateDate").innerHTML =
+data.date;
+
+
+
+document.getElementById("qrCode").src =
+
+"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://aryanparihar6000-lang.github.io/anjali-bike-driving-school/certificate-verification.html?id="+id;
+
+
+
+}
+
+else{
+
+
+document.getElementById("certificateBox").innerHTML =
+"Certificate Not Found ❌";
+
+
+}
+
+
+})
+
+
+.catch((error)=>{
+
+
+console.log(error);
+
+
+});
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
