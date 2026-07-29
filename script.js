@@ -648,6 +648,15 @@ html2pdf()
 
 }
 
+function testCertificate(){
+
+alert("JS Working");
+
+}
+
+
+console.log("generateCertificate available:", typeof generateCertificate);
+
 /* ==========================
 MOBILE MENU
 ========================== */
