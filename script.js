@@ -319,6 +319,8 @@ String(newCertificateNumber).padStart(4,"0");
 
 // Save Certificate Record
 
+const date = new Date().toLocaleDateString("en-IN");
+   
 const certificateData = {
 
 id: certificateID,
@@ -355,7 +357,6 @@ localStorage.setItem(
 JSON.stringify(certificateList)
 );
    
-const date = new Date().toLocaleDateString("en-IN");
 
 
 const certificateWindow = window.open("","_blank");
