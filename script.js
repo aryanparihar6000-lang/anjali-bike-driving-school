@@ -749,3 +749,94 @@ ${id}
 });
 
 }
+
+// ==========================
+// LOAD FIREBASE CERTIFICATES
+// ==========================
+
+
+function loadCertificates(){
+
+
+const list =
+document.getElementById("certificateList");
+
+
+if(!list) return;
+
+
+const keyword =
+document.getElementById("searchCertificate").value.toLowerCase();
+
+
+list.innerHTML = "Loading...";
+
+
+db.collection("certificates")
+.get()
+
+.then((snapshot)=>{
+
+
+list.innerHTML="";
+
+
+snapshot.forEach((doc)=>{
+
+
+const data = doc.data();
+
+
+if(
+data.name.toLowerCase().includes(keyword) ||
+data.id.toLowerCase().includes(keyword)
+){
+
+
+list.innerHTML += `
+
+<div class="certificate-admin-card">
+
+<b>Certificate ID:</b>
+${data.id}
+
+<br>
+
+<b>Student:</b>
+${data.name}
+
+<br>
+
+<b>Course:</b>
+${data.course}
+
+<br>
+
+<b>Date:</b>
+${data.date}
+
+
+<br><br>
+
+
+<button onclick="deleteCertificate('${data.id}')">
+
+🗑 Delete
+
+</button>
+
+
+</div>
+
+`;
+
+}
+
+
+});
+
+
+});
+
+
+}
