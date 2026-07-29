@@ -669,3 +669,48 @@ if (menu && nav) {
         nav.classList.toggle("active");
     });
 }
+
+function searchCertificates(){
+
+const keyword =
+document.getElementById("searchCertificate").value.toLowerCase();
+
+const list =
+document.getElementById("certificateList");
+
+const ids =
+JSON.parse(localStorage.getItem("certificateList")) || [];
+
+list.innerHTML = "";
+
+ids.forEach(id=>{
+
+const data =
+JSON.parse(localStorage.getItem(id));
+
+if(!data) return;
+
+if(
+data.name.toLowerCase().includes(keyword) ||
+id.toLowerCase().includes(keyword)
+){
+
+list.innerHTML += `
+<div style="
+background:#fff;
+padding:15px;
+margin:10px 0;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
+<b>${data.name}</b><br>
+${data.course}<br>
+${id}
+</div>
+`;
+
+}
+
+});
+
+}
