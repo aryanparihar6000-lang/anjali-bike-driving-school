@@ -13,7 +13,6 @@
 
 <script src="firebase-config.js"></script>
 
-<script src="script.js"></script>
   
 </head>
 
@@ -162,6 +161,16 @@ window.location.href="admin-login.html";
 
 <script>
 
+window.onload=function(){
+
+loadCertificates();
+
+}
+
+</script>
+  
+<script>
+
 function logoutAdmin(){
 
 localStorage.removeItem("adminLogin");
@@ -170,18 +179,6 @@ window.location.href="admin-login.html";
 
 }
 
-<hr style="margin:40px 0;">
-
-<h2>Generated Certificates</h2>
-
-<input
-type="text"
-id="searchCertificate"
-placeholder="Search by Name or Certificate ID"
-onkeyup="searchCertificates()">
-
-<div id="certificateList"></div>
-  
 </script>
 
 <script>
