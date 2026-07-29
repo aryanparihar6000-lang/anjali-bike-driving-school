@@ -7,6 +7,12 @@
 
 <link rel="stylesheet" href="style.css">
 
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+
+<script src="firebase-config.js"></script>
+  
 </head>
 
 
@@ -58,20 +64,21 @@ Login
 
 <script>
 
-
 function adminLogin(){
 
-
-let user =
+const email =
 document.getElementById("adminUser").value;
 
 
-let pass =
+const password =
 document.getElementById("adminPass").value;
 
 
+firebase.auth()
+.signInWithEmailAndPassword(email,password)
 
-if(user==="admin" && pass==="anjali123"){
+
+.then(()=>{
 
 
 localStorage.setItem(
@@ -83,15 +90,20 @@ localStorage.setItem(
 window.location.href="admin-certificate.html";
 
 
-}
-else{
+})
+
+
+.catch((error)=>{
 
 
 document.getElementById("loginMessage").innerHTML =
-"❌ Invalid Login";
+"❌ Invalid Email or Password";
 
 
-}
+console.log(error.message);
+
+
+});
 
 
 }
