@@ -567,6 +567,23 @@ Training Duration: ${duration}
 Certificate ID: ${certificateID}
 </p>
 
+<br>
+
+<img 
+src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${certificateID}"
+style="
+width:120px;
+height:120px;
+margin-top:20px;
+">
+
+<p style="
+font-size:14px;
+color:#555;
+">
+Scan QR Code to Verify Certificate
+</p>
+
 <img 
 src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${certificateID}"
 style="
