@@ -511,7 +511,7 @@ font-weight:bold;
 <div class="certificate-box">
 
 
-<img src="images/logo.png"
+<img src="images/logo.jpeg"
 style="
 width:100px;
 height:100px;
