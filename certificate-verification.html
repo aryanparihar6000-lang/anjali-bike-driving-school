@@ -134,10 +134,9 @@ Course:
 
 <script>
 
-function checkCertificate(){
+async function checkCertificate(){
 
-
-let id = document.getElementById("certificateSearch").value;
+let id = document.getElementById("certificateSearch").value.trim();
 
 
 if(id==""){
@@ -149,15 +148,20 @@ return;
 }
 
 
-const certificateData =
-JSON.parse(localStorage.getItem(id));
+const docRef = db.collection("certificates").doc(id);
 
 
-if(certificateData){
+const doc = await docRef.get();
+
+
+if(doc.exists){
+
+
+const data = doc.data();
 
 
 document.getElementById("verifyID").innerHTML =
-certificateData.id;
+data.id;
 
 
 document.getElementById("status").innerHTML =
@@ -165,15 +169,14 @@ document.getElementById("status").innerHTML =
 
 
 document.getElementById("verifyName").innerHTML =
-certificateData.name;
+data.name;
 
 
 document.getElementById("verifyCourse").innerHTML =
-certificateData.course;
+data.course;
 
 
 }
-
 else{
 
 
@@ -194,7 +197,6 @@ document.getElementById("verifyCourse").innerHTML =
 
 
 }
-
 
 }
 
@@ -220,6 +222,28 @@ checkCertificate();
 
 }
 
+  window.onload = function(){
+
+
+const urlParams = new URLSearchParams(window.location.search);
+
+
+const certificateID = urlParams.get("id");
+
+
+if(certificateID){
+
+
+document.getElementById("certificateSearch").value = certificateID;
+
+
+checkCertificate();
+
+
+}
+
+
+}
 
 </script>
 
