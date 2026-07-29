@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Admin Login - Anjali Bike Driving School</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<section class="admin-login">
+
+
+<div class="login-box">
+
+
+<h2>
+🔐 Admin Login
+</h2>
+
+
+<p>
+Only authorized person can access certificate generator.
+</p>
+
+
+<input 
+type="text"
+id="adminUser"
+placeholder="Username">
+
+
+<input 
+type="password"
+id="adminPass"
+placeholder="Password">
+
+
+<button onclick="adminLogin()">
+Login
+</button>
+
+
+<p id="loginMessage"></p>
+
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+
+function adminLogin(){
+
+
+let user =
+document.getElementById("adminUser").value;
+
+
+let pass =
+document.getElementById("adminPass").value;
+
+
+
+if(user==="admin" && pass==="anjali123"){
+
+
+window.location.href="admin-certificate.html";
+
+
+}
+
+else{
+
+
+document.getElementById("loginMessage").innerHTML =
+"❌ Invalid Login";
+
+
+}
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
