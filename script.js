@@ -308,6 +308,7 @@ localStorage.setItem(
 newCertificateNumber
 );
 
+   
 
 const certificateID =
 "ABS-2026-" +
@@ -340,6 +341,20 @@ JSON.stringify(certificateData)
 
 );
 
+// Save Certificate List
+
+let certificateList = 
+JSON.parse(localStorage.getItem("certificateList")) || [];
+
+
+certificateList.push(certificateID);
+
+
+localStorage.setItem(
+"certificateList",
+JSON.stringify(certificateList)
+);
+   
 const date = new Date().toLocaleDateString("en-IN");
 
 
