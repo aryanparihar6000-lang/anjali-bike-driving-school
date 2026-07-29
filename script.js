@@ -417,18 +417,6 @@ position:relative;
 }
 
 
-.certificate-box:before{
-
-content:"🏍️";
-
-font-size:70px;
-
-display:block;
-
-margin-bottom:15px;
-
-}
-
 
 h1{
 
