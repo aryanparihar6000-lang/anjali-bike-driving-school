@@ -498,24 +498,13 @@ font-weight:bold;
 <div class="certificate-box">
 
 
-<div style="
-width:90px;
-height:90px;
-margin:auto;
-border-radius:50%;
-background:#d62828;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:45px;
-color:white;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
+<img src="images/logo.png"
+style="
+width:100px;
+height:100px;
+object-fit:contain;
+margin-bottom:15px;
 ">
-
-🏍️
-
-</div>
-
 
 <h1>
 Anjali Bike Driving School
