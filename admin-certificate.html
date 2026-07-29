@@ -148,11 +148,15 @@ Loading certificates...
 
 <script>
 
-if(localStorage.getItem("adminLogin") !== "true"){
+firebase.auth().onAuthStateChanged(function(user){
+
+if(!user){
 
 window.location.href="admin-login.html";
 
 }
+
+});
 
 </script>
 
@@ -173,9 +177,14 @@ loadCertificates();
 
 function logoutAdmin(){
 
+firebase.auth().signOut()
+.then(()=>{
+
 localStorage.removeItem("adminLogin");
 
 window.location.href="admin-login.html";
+
+});
 
 }
 
