@@ -570,7 +570,7 @@ Certificate ID: ${certificateID}
 <br>
 
 <img 
-src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${certificateID}"
+src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://aryanparihar6000-lang.github.io/anjali-bike-driving-school/certificate-verification.html?id=${certificateID}"
 style="
 width:120px;
 height:120px;
@@ -584,12 +584,6 @@ color:#555;
 Scan QR Code to Verify Certificate
 </p>
 
-<img 
-src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${certificateID}"
-style="
-width:120px;
-margin-top:20px;
-">
 
 <p>
 Date: ${date}
