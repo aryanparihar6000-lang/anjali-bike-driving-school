@@ -510,7 +510,8 @@ font-weight:bold;
 
 <div class="certificate-box">
 
-<img src="https://aryanparihar6000-lang.github.io/anjali-bike-driving-school/logo.jpeg"
+<img 
+src="https://raw.githubusercontent.com/aryanparihar6000-lang/anjali-bike-driving-school/main/logo.jpeg"
 style="
 width:100px;
 height:100px;
