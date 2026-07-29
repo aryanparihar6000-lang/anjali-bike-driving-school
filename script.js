@@ -795,38 +795,36 @@ data.id.toLowerCase().includes(keyword)
 
 list.innerHTML += `
 
-<div class="certificate-admin-card">
+<div style="
+background:#fff;
+padding:15px;
+margin:10px 0;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+">
 
-<b>Certificate ID:</b>
-${data.id}
+<b>${data.name}</b><br>
 
-<br>
+${data.course}<br>
 
-<b>Student:</b>
-${data.name}
-
-<br>
-
-<b>Course:</b>
-${data.course}
-
-<br>
-
-<b>Date:</b>
-${data.date}
-
+Certificate ID:
+${id}
 
 <br><br>
 
+<button onclick="viewCertificate('${id}')">
+👁 View Certificate
+</button>
 
-<button onclick="deleteCertificate('${data.id}')">
 
+<button onclick="deleteCertificate('${id}')">
 🗑 Delete
-
 </button>
 
 
 </div>
+
+`;
 
 `;
 
@@ -876,5 +874,32 @@ console.log(error);
 alert("Delete Failed");
 
 });
+
+}
+
+// ==========================
+// VIEW CERTIFICATE
+// ==========================
+
+function viewCertificate(id){
+
+const data =
+JSON.parse(localStorage.getItem(id));
+
+
+if(!data){
+
+alert("Certificate data not found");
+
+return;
+
+}
+
+
+window.open(
+"certificate-view.html?id="+id,
+"_blank"
+);
+
 
 }
