@@ -110,9 +110,21 @@ window.location.href="admin-login.html";
 
 </script>
 
+  
 <script src="script.js"></script>
 
+<script>
 
+function logoutAdmin(){
+
+localStorage.removeItem("adminLogin");
+
+window.location.href="admin-login.html";
+
+}
+
+</script>
+  
 </body>
 
 </html>
