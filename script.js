@@ -217,6 +217,10 @@ topBtn.onclick = () => {
 
 console.log("Premium Website Loaded Successfully");
 
+let verifyLink =
+"https://aryanparihar6000-lang.github.io/anjali-bike-driving-school/certificate-verification.html?id="
++ certificateID;
+
 /* ==========================
 CERTIFICATE VERIFICATION
 ========================== */
@@ -309,7 +313,10 @@ const certificateID =
 "ABS-2026-" +
 String(newCertificateNumber).padStart(4,"0");
 
-   // Save Certificate Record
+   const date = new Date().toLocaleDateString("en-IN");
+
+
+// Save Certificate Record
 
 const certificateData = {
 
@@ -324,7 +331,6 @@ duration: duration,
 date: date
 
 };
-
 
 localStorage.setItem(
 
