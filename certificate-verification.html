@@ -159,19 +159,36 @@ certificateData.course;
 
 
 }
+
 else{
+
+
+document.getElementById("verifyID").innerHTML =
+id;
 
 
 document.getElementById("status").innerHTML =
 "Certificate Not Found ❌";
 
 
+document.getElementById("verifyName").innerHTML =
+"-";
+
+
+document.getElementById("verifyCourse").innerHTML =
+"-";
+
+
 }
+
 
 }
 
 
 // QR Auto Fill
+
+window.onload = function(){
+
 
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -187,8 +204,10 @@ checkCertificate();
 }
 
 
-</script>
+}
 
+
+</script>
 
 </body>
 
