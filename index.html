@@ -508,24 +508,28 @@ Enroll Now
 
             <input
                 type="text"
+                id="name"
                 name="name"
                 placeholder="Your Full Name"
                 required>
 
             <input
                 type="text"
+                id="address"
                 name="address"
                 placeholder="Your Address"
                 required>
 
             <input
                 type="email"
+                id="email"
                 name="email"
                 placeholder="Your Email"
                 required>
 
             <input
                 type="tel"
+                id="mobile"
                 name="mobile"
                 placeholder="Mobile Number"
                 pattern="[0-9]{10}"
@@ -537,14 +541,18 @@ Enroll Now
 
 <select id="course" name="course_type" required>
     <option value="">Training Type</option>
-    <option value="Bike Training">🏍️ Bike</option>
-    <option value="Scooty Training">🛵 Scooty</option>
-    <option value="Ladies Special Training">👩 Ladies</option>
+    
+    <option value="7 Days Bike Training">🏍️ 7 Days Bike Training</option>
+
+    <option value="14 Days Bike Training">🏍️ 14 Days Bike Training</option>
+
+    <option value="Ladies Special Training">👩 Ladies Special Training</option>
 </select>
 
 
 <input
 type="date"
+id="joiningDate"    
 name="start_date"
 required>
 
@@ -556,7 +564,7 @@ required>
 </select>
 
 
-<select name="time_slot" required>
+<select id="timeSlot" name="time_slot" required>
 
     <option value="">Time Slot</option>
     <option value="7 AM - 9 AM">7 AM - 9 AM</option>
