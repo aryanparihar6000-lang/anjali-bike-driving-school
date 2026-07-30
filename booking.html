@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+Book Bike Training | Anjali Bike Driving School
+</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script src="firebase-config.js"></script>
+
+</head>
+
+<body>
+
+<section class="booking-page">
+
+<div class="container">
+
+<div class="booking-box">
+
+<h1>🏍️ Book Your Training</h1>
+
+<p>
+Complete the form below to continue.
+</p>
+
+<input
+type="text"
+id="name"
+placeholder="Full Name"
+required>
+
+<input
+type="tel"
+id="mobile"
+placeholder="Mobile Number"
+required>
+
+<label style="display:flex;align-items:center;gap:10px;margin:15px 0;">
+
+<input
+type="checkbox"
+id="sameWhatsapp"
+checked>
+
+WhatsApp Number is same as Mobile Number
+
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Email Address">
+
+<input
+type="text"
+id="address"
+placeholder="Address">
+
+<select id="course">
+
+<option value="">Select Course</option>
+
+<option value="7 Days Bike Training">
+7 Days Bike Training
+</option>
+
+<option value="14 Days Bike Training">
+14 Days Bike Training
+</option>
+
+<option value="Ladies Special Training">
+Ladies Special Training
+</option>
+
+</select>
+
+<input
+type="date"
+id="joiningDate">
+
+<select id="timeSlot">
+
+<option>7:00 AM</option>
+<option>8:00 AM</option>
+<option>9:00 AM</option>
+<option>5:00 PM</option>
+<option>6:00 PM</option>
+<option>7:00 PM</option>
+
+</select>
+
+<textarea
+id="message"
+placeholder="Additional Notes (Optional)">
+</textarea>
+
+<h2 id="coursePrice">
+
+Fees : ₹0
+
+</h2>
+
+<button class="btn" onclick="startBooking()">
+
+Continue To Payment →
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="booking.js"></script>
+
+</body>
+
+</html>
