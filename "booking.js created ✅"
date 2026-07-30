@@ -233,14 +233,57 @@ function startPayment() {
 
         description: "Bike Training Booking",
 
-        handler: function (response) {
+      handler: function (response) {
 
-            alert("Payment Successful ✅");
+    const bookingID = "BOOK-" + Date.now();
 
-            console.log(response);
+    const bookingData = {
 
-            // अगले स्टेप में यहीं Firestore Save करेंगे
+        bookingID: bookingID,
 
+        paymentID: response.razorpay_payment_id,
+
+        name: document.querySelector('input[name="name"]').value,
+
+        address: document.querySelector('input[name="address"]').value,
+
+        email: document.querySelector('input[name="email"]').value,
+
+        mobile: document.querySelector('input[name="mobile"]').value,
+
+        course: document.getElementById("selectedCourse").value,
+
+        amount: document.getElementById("selectedAmount").value,
+
+        date: new Date().toLocaleString(),
+
+        status: "Paid"
+
+    };
+
+    db.collection("bookings")
+
+    .doc(bookingID)
+
+    .set(bookingData)
+
+    .then(() => {
+
+        alert("Booking Successful ✅");
+
+        window.location.href = "receipt.html?id=" + bookingID;
+
+    })
+
+    .catch((error) => {
+
+        console.log(error);
+
+        alert("Booking Save Failed");
+
+    });
+
+}
         }
 
     };
