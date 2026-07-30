@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payment Receipt | Anjali Bike Driving School</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script src="firebase-config.js"></script>
+
+</head>
+
+<body>
+
+<section class="certificate-verify-page">
+
+<div class="container">
+
+<div id="receiptBox" class="verify-card">
+
+<img src="logo.jpeg"
+style="width:90px;height:90px;object-fit:contain;">
+
+<h2>Anjali Bike Driving School</h2>
+
+<p>Ride Safe • Ride Smart</p>
+
+<hr>
+
+<h2>PAYMENT RECEIPT</h2>
+
+<p><b>Receipt No :</b> <span id="receiptNo">Loading...</span></p>
+
+<p><b>Student Name :</b> <span id="studentName"></span></p>
+
+<p><b>Mobile :</b> <span id="mobile"></span></p>
+
+<p><b>Email :</b> <span id="email"></span></p>
+
+<p><b>Course :</b> <span id="course"></span></p>
+
+<p><b>Amount Paid :</b> ₹<span id="amount"></span></p>
+
+<p><b>Payment Status :</b>
+
+<span style="color:green;font-weight:bold;">
+
+SUCCESS ✅
+
+</span>
+
+</p>
+
+<p><b>Date :</b>
+
+<span id="date"></span>
+
+</p>
+
+<hr>
+
+<p>
+
+📍 Bharat Nagar, New Friends Colony,<br>
+
+New Delhi - 110025
+
+</p>
+
+<p>
+
+📞 +91 9599289308
+
+</p>
+
+<p>
+
+Thank You For Choosing
+
+Anjali Bike Driving School
+
+</p>
+
+<p style="font-size:13px;color:#666;">
+
+This is a computer generated receipt.
+
+</p>
+
+<br>
+
+<button class="btn"
+
+onclick="downloadReceipt()">
+
+📄 Download Receipt
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const params=new URLSearchParams(window.location.search);
+
+const id=params.get("id");
+
+db.collection("bookings")
+
+.doc(id)
+
+.get()
+
+.then((doc)=>{
+
+const data=doc.data();
+
+document.getElementById("receiptNo").innerHTML=id;
+
+document.getElementById("studentName").innerHTML=data.name;
+
+document.getElementById("mobile").innerHTML=data.mobile;
+
+document.getElementById("email").innerHTML=data.email;
+
+document.getElementById("course").innerHTML=data.course;
+
+document.getElementById("amount").innerHTML=data.amount;
+
+document.getElementById("date").innerHTML=new Date().toLocaleString();
+
+});
+
+function downloadReceipt(){
+
+html2pdf()
+
+.set({
+
+margin:8,
+
+filename:"Receipt.pdf",
+
+image:{type:"jpeg",quality:1},
+
+html2canvas:{scale:2},
+
+jsPDF:{unit:"mm",format:"a4",orientation:"portrait"}
+
+})
+
+.from(document.getElementById("receiptBox"))
+
+.save();
+
+}
+
+</script>
+
+</body>
+
+</html>
