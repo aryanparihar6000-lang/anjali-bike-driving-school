@@ -509,6 +509,32 @@ font-weight:bold;
 
 }
 
+@page{
+    size:A4 landscape;
+    margin:8mm;
+}
+
+@media print{
+
+    body{
+        margin:0;
+        padding:0;
+        background:white;
+    }
+
+    .certificate-box{
+        width:100%;
+        padding:20px;
+        box-sizing:border-box;
+        page-break-inside:avoid;
+        break-inside:avoid;
+    }
+
+    button{
+        display:none;
+    }
+
+}
 
 </style>
 
