@@ -197,3 +197,56 @@ function startBooking() {
     });
 
 }
+function selectCourse(course, amount) {
+
+    const courseField = document.getElementById("course");
+
+    if (courseField) {
+        courseField.value = course;
+    }
+
+    document.getElementById("selectedCourse").value = course;
+    document.getElementById("selectedAmount").value = amount;
+
+    localStorage.setItem("course", course);
+    localStorage.setItem("amount", amount);
+
+}
+function startPayment() {
+
+    let amount = document.getElementById("selectedAmount").value;
+
+    if (!amount) {
+        alert("Please select a course first.");
+        return;
+    }
+
+    var options = {
+
+        key: "rzp_test_TJlanaKoERv8bs",
+
+        amount: amount * 100,
+
+        currency: "INR",
+
+        name: "Anjali Bike Driving School",
+
+        description: "Bike Training Booking",
+
+        handler: function (response) {
+
+            alert("Payment Successful ✅");
+
+            console.log(response);
+
+            // अगले स्टेप में यहीं Firestore Save करेंगे
+
+        }
+
+    };
+
+    var rzp = new Razorpay(options);
+
+    rzp.open();
+
+}
