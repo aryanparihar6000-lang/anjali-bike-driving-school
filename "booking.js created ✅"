@@ -1,0 +1,163 @@
+// ============================
+// ANJALI BIKE DRIVING SCHOOL
+// BOOKING SYSTEM
+// ============================
+
+// Razorpay Test Key
+const RAZORPAY_KEY = "rzp_test_TJlanaKoERv8bs";
+
+// Course Prices
+const prices = {
+  "7 Days Bike Training": 4000,
+  "14 Days Bike Training": 7000,
+  "Ladies Special Training": 5000
+};
+
+// Auto Price Update
+const course = document.getElementById("course");
+
+if (course) {
+
+  course.addEventListener("change", function () {
+
+    const price = prices[this.value] || 0;
+
+    document.getElementById("coursePrice").innerHTML =
+      "Fees : ₹" + price;
+
+  });
+
+}
+
+// Booking Function
+
+function startBooking() {
+
+  const name = document.getElementById("name").value.trim();
+  const mobile = document.getElementById("mobile").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const address = document.getElementById("address").value.trim();
+  const course = document.getElementById("course").value;
+  const date = document.getElementById("joiningDate").value;
+  const time = document.getElementById("timeSlot").value;
+  const note = document.getElementById("message").value;
+
+  if (
+    name == "" ||
+    mobile == "" ||
+    course == ""
+  ) {
+
+    alert("Please fill all required fields.");
+
+    return;
+
+  }
+
+  const amount = prices[course];
+
+  const bookingID =
+    "BOOK-" + Date.now();
+
+  // Save Booking
+
+  db.collection("bookings")
+    .doc(bookingID)
+    .set({
+
+      bookingID,
+
+      name,
+
+      mobile,
+
+      email,
+
+      address,
+
+      course,
+
+      amount,
+
+      joiningDate: date,
+
+      timeSlot: time,
+
+      note,
+
+      paymentStatus: "Pending",
+
+      createdAt: new Date()
+
+    })
+
+    .then(() => {
+
+      alert("Booking Saved Successfully ✅");
+
+      // Razorpay Checkout
+
+      const options = {
+
+        key: RAZORPAY_KEY,
+
+        amount: amount * 100,
+
+        currency: "INR",
+
+        name: "Anjali Bike Driving School",
+
+        description: course,
+
+        handler: function (response) {
+
+          db.collection("bookings")
+            .doc(bookingID)
+            .update({
+
+              paymentStatus: "Paid",
+
+              paymentId: response.razorpay_payment_id
+
+            });
+
+          alert("Payment Successful ✅");
+
+          window.location.href =
+            "receipt.html?id=" + bookingID;
+
+        },
+
+        prefill: {
+
+          name: name,
+
+          email: email,
+
+          contact: mobile
+
+        },
+
+        theme: {
+
+          color: "#d62828"
+
+        }
+
+      };
+
+      const rzp = new Razorpay(options);
+
+      rzp.open();
+
+    })
+
+    .catch((error) => {
+
+      console.log(error);
+
+      alert("Booking Failed");
+
+    });
+
+}
