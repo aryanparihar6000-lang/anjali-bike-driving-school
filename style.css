@@ -4341,3 +4341,16 @@ width:100%;
 
 
 }
+@media (min-width: 769px) {
+    #menu-toggle {
+        display: none;
+    }
+}
+@media (min-width: 769px) {
+
+.logo h2,
+.logo span{
+    display:none;
+}
+
+}
