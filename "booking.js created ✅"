@@ -1,4 +1,40 @@
 // ============================
+// AUTO SELECT COURSE
+// ============================
+
+const params = new URLSearchParams(window.location.search);
+
+const selectedCourse = params.get("course");
+
+window.onload = function () {
+
+    const course = document.getElementById("course");
+
+    if (!course) return;
+
+    if (selectedCourse === "7") {
+
+        course.value = "7 Days Bike Training";
+
+    }
+
+    else if (selectedCourse === "14") {
+
+        course.value = "14 Days Bike Training";
+
+    }
+
+    else if (selectedCourse === "ladies") {
+
+        course.value = "Ladies Special Training";
+
+    }
+
+    course.dispatchEvent(new Event("change"));
+
+};
+
+// ============================
 // ANJALI BIKE DRIVING SCHOOL
 // BOOKING SYSTEM
 // ============================
