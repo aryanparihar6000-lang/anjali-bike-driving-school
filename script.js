@@ -393,10 +393,10 @@ body{
 font-family:Arial;
 background:#f5f7fb;
 padding:40px;
+margin:0;
 text-align:center;
 
 }
-
 
 .certificate-box{
 
@@ -405,7 +405,11 @@ linear-gradient(135deg,#ffffff,#fff8e7);
 
 border:12px double #d4af37;
 
-padding:60px 40px;
+width:95%;
+max-width:1000px;
+margin:auto;
+padding:25px 30px;
+box-sizing:border-box;
 
 border-radius:25px;
 
@@ -516,14 +520,16 @@ font-weight:bold;
 
 <div class="certificate-box">
 
-<img 
-src="https://raw.githubusercontent.com/aryanparihar6000-lang/anjali-bike-driving-school/main/logo.jpeg"
+<img
+src="logo.jpeg"
 style="
 width:100px;
 height:100px;
 object-fit:contain;
 margin-bottom:15px;
-">
+"
+onerror="this.style.display='none';"
+>
 
 <h1>
 Anjali Bike Driving School
@@ -598,7 +604,7 @@ Date: ${date}
 
 <br>
 
-<div style="display:flex;justify-content:space-around;margin-top:40px;">
+<div style="display:flex;justify-content:space-around;margin-top:20px;">
 
 <div>
 _____________<br>
@@ -613,7 +619,7 @@ Director
 
 </div>
 
-<h3>
+<h3 style="margin-top:15px;">
 Authorized Signature
 </h3>
 
