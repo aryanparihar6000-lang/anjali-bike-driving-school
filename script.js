@@ -392,7 +392,7 @@ body{
 
 font-family:Arial;
 background:#f5f7fb;
-padding:40px;
+padding:8px;
 margin:0;
 text-align:center;
 
@@ -408,7 +408,7 @@ border:12px double #d4af37;
 width:95%;
 max-width:1000px;
 margin:auto;
-padding:25px 30px;
+padding:20px;
 box-sizing:border-box;
 
 border-radius:25px;
@@ -610,9 +610,9 @@ Certificate ID: ${certificateID}
 <img 
 src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://aryanparihar6000-lang.github.io/anjali-bike-driving-school/certificate-verification.html?id=${certificateID}"
 style="
-width:120px;
-height:120px;
-margin-top:20px;
+width:90px;
+height:90px;
+margin-top:10px;
 ">
 
 <p style="
@@ -627,10 +627,7 @@ Scan QR Code to Verify Certificate
 Date: ${date}
 </p>
 
-
-<br>
-
-<div style="display:flex;justify-content:space-around;margin-top:20px;">
+<div style="display:flex;justify-content:space-around;margin-top:15px;">
 
 <div>
 _____________<br>
