@@ -318,7 +318,7 @@ Call For Training
 Save ₹2,600
 </p>
 
-<a href="#booking" class="deal-btn">
+<a href="#booking" class="deal-btn" onclick="selectCourse('Bike Training','5900')">
 Book Now
 </a>
 
@@ -346,7 +346,7 @@ Book Now
 Save ₹4,500
 </p>
 
-<a href="#booking" class="deal-btn">
+<a href="#booking" class="deal-btn" onclick="selectCourse('Scooty Training','6500')">
 Book Now
 </a>
 
@@ -374,7 +374,7 @@ Book Now
 Save ₹4,500
 </p>
 
-<a href="#booking" class="deal-btn">
+<a href="#booking" class="deal-btn" onclick="selectCourse('Bike + Scooty Combo','9500')">
 Book Now
 </a>
 
@@ -440,8 +440,10 @@ Call Now
 <li>✔ Safety Tips</li>
 <li>✔ Practical Sessions</li>
 </ul>
-<a href="https://wa.me/919599289308" class="btn">Enroll Now</a>
-</div>
+<a href="#booking" class="btn"
+onclick="selectCourse('Basic Bike Training','6400')">
+Enroll Now
+</a>
 
 <div class="course-card featured">
 <h3>Advanced Training</h3>
@@ -452,8 +454,10 @@ Call Now
 <li>✔ Parking Skills</li>
 <li>✔ Certificate</li>
 </ul>
-<a href="https://wa.me/919599289308" class="btn">Enroll Now</a>
-</div>
+<a href="#booking" class="btn"
+onclick="selectCourse('Advanced Training','10000')">
+Enroll Now
+</a>
 
 <div class="course-card">
 <h3>Ladies Special Batch</h3>
@@ -464,8 +468,10 @@ Call Now
 <li>✔ Flexible Timing</li>
 <li>✔ Practical Sessions</li>
 </ul>
-<a href="https://wa.me/919599289308" class="btn">Enroll Now</a>
-</div>
+<a href="#booking" class="btn"
+onclick="selectCourse('Ladies Special Batch','7000')">
+Enroll Now
+</a>
 
 </div>
 
@@ -490,6 +496,9 @@ Call Now
         </div>
 
         <form action="https://formspree.io/f/mlgqavzy" method="POST" class="booking-form">
+            <input type="hidden" id="selectedCourse" name="selected_course">
+
+<input type="hidden" id="selectedAmount" name="amount">
 
             <!-- Redirect after successful submission -->
             <input type="hidden" name="_next" value="https://aryanparihar6000-lang.github.io/anjali-bike-driving-school/thankyou.html">
@@ -526,7 +535,7 @@ Call Now
             
   <div class="form-row">
 
-<select name="course_type" required>
+<select id="course" name="course_type" required>
     <option value="">Training Type</option>
     <option value="Bike Training">🏍️ Bike</option>
     <option value="Scooty Training">🛵 Scooty</option>
