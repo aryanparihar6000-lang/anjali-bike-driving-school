@@ -57,10 +57,23 @@ if (course) {
 
   course.addEventListener("change", function () {
 
-    const price = prices[this.value] || 0;
+    const selectedCourse = this.value;
+    const price = prices[selectedCourse] || 0;
 
-    document.getElementById("coursePrice").innerHTML =
-      "Fees : ₹" + price;
+    // Update price display if available
+    const coursePrice = document.getElementById("coursePrice");
+
+    if (coursePrice) {
+      coursePrice.innerHTML = "Fees : ₹" + price;
+    }
+
+    // Save selected course and amount
+    document.getElementById("selectedCourse").value = selectedCourse;
+    document.getElementById("selectedAmount").value = price;
+
+    // Optional local storage
+    localStorage.setItem("course", selectedCourse);
+    localStorage.setItem("amount", price);
 
   });
 
