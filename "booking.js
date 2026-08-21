@@ -1,309 +1,93 @@
 console.log("booking.js loaded");
+
+// ============================
+// COURSE PRICES
+// ============================
+
+const prices = {
+    "7 Days Bike Training": 4000,
+    "14 Days Bike Training": 7000,
+    "Ladies Special Training": 5000
+};
+
+
 // ============================
 // AUTO SELECT COURSE
 // ============================
 
 const params = new URLSearchParams(window.location.search);
-
 const selectedCourse = params.get("course");
 
-window.onload = function () {
+window.addEventListener("DOMContentLoaded", function () {
 
     const course = document.getElementById("course");
 
     if (!course) return;
 
+    // Select course from URL
     if (selectedCourse === "7") {
 
         course.value = "7 Days Bike Training";
 
-    }
-
-    else if (selectedCourse === "14") {
+    } else if (selectedCourse === "14") {
 
         course.value = "14 Days Bike Training";
 
-    }
-
-    else if (selectedCourse === "ladies") {
+    } else if (selectedCourse === "ladies") {
 
         course.value = "Ladies Special Training";
-
     }
 
-    course.dispatchEvent(new Event("change"));
+    updateCoursePrice();
 
-};
+});
+
 
 // ============================
-// ANJALI BIKE DRIVING SCHOOL
-// BOOKING SYSTEM
+// COURSE PRICE UPDATE
 // ============================
 
-// Razorpay Test Key
-const RAZORPAY_KEY = "rzp_test_TJlanaKoERv8bs";
+function updateCoursePrice() {
 
-// Course Prices
-const prices = {
-  "7 Days Bike Training": 4000,
-  "14 Days Bike Training": 7000,
-  "Ladies Special Training": 5000
-};
-
-// Auto Price Update
-const course = document.getElementById("course");
-
-if (course) {
-
-  course.addEventListener("change", function () {
-
-    const selectedCourse = this.value;
-    const price = prices[selectedCourse] || 0;
-
-    // Update price display if available
+    const course = document.getElementById("course");
+    const selectedAmount = document.getElementById("selectedAmount");
+    const selectedCourseField = document.getElementById("selectedCourse");
     const coursePrice = document.getElementById("coursePrice");
 
+    if (!course) return;
+
+    const courseName = course.value;
+    const amount = prices[courseName] || 0;
+
+    // Save selected course
+    if (selectedCourseField) {
+        selectedCourseField.value = courseName;
+    }
+
+    // Save amount
+    if (selectedAmount) {
+        selectedAmount.value = amount;
+    }
+
+    // Show price if price element exists
     if (coursePrice) {
-      coursePrice.innerHTML = "Fees : ₹" + price;
+        coursePrice.innerHTML = amount
+            ? "Fees : ₹" + amount
+            : "";
+    }
+}
+
+
+// ============================
+// COURSE CHANGE EVENT
+// ============================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const course = document.getElementById("course");
+
+    if (course) {
+        course.addEventListener("change", updateCoursePrice);
     }
 
-    // Save selected course and amount
-    document.getElementById("selectedCourse").value = selectedCourse;
-    document.getElementById("selectedAmount").value = price;
-
-    // Optional local storage
-    localStorage.setItem("course", selectedCourse);
-    localStorage.setItem("amount", price);
-
-  });
-
-}
-
-// Booking Function
-
-function startBooking() {
-
-  const name = document.getElementById("name").value.trim();
-  const mobile = document.getElementById("mobile").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const address = document.getElementById("address").value.trim();
-  const course = document.getElementById("course").value;
-  const date = document.getElementById("joiningDate").value;
-  const time = document.getElementById("timeSlot").value;
-  const note = document.getElementById("message").value;
-
-  if (
-    name == "" ||
-    mobile == "" ||
-    course == ""
-  ) {
-
-    alert("Please fill all required fields.");
-
-    return;
-
-  }
-
-  const amount = prices[course];
-
-  const bookingID =
-    "BOOK-" + Date.now();
-
-  // Save Booking
-
-  db.collection("bookings")
-    .doc(bookingID)
-    .set({
-
-      bookingID,
-
-      name,
-
-      mobile,
-
-      email,
-
-      address,
-
-      course,
-
-      amount,
-
-      joiningDate: date,
-
-      timeSlot: time,
-
-      note,
-
-      paymentStatus: "Pending",
-
-      createdAt: new Date()
-
-    })
-
-    .then(() => {
-
-      alert("Booking Saved Successfully ✅");
-
-      // Razorpay Checkout
-
-      const options = {
-
-        key: RAZORPAY_KEY,
-
-        amount: amount * 100,
-
-        currency: "INR",
-
-        name: "Anjali Bike Driving School",
-
-        description: course,
-
-        handler: function (response) {
-
-          db.collection("bookings")
-            .doc(bookingID)
-            .update({
-
-              paymentStatus: "Paid",
-
-              paymentId: response.razorpay_payment_id
-
-            });
-
-          alert("Payment Successful ✅");
-
-          window.location.href =
-            "receipt.html?id=" + bookingID;
-
-        },
-
-        prefill: {
-
-          name: name,
-
-          email: email,
-
-          contact: mobile
-
-        },
-
-        theme: {
-
-          color: "#d62828"
-
-        }
-
-      };
-
-      const rzp = new Razorpay(options);
-
-      rzp.open();
-
-    })
-
-    .catch((error) => {
-
-      console.log(error);
-
-      alert("Booking Failed");
-
-    });
-
-}
-function selectCourse(course, amount) {
-
-    const courseField = document.getElementById("course");
-
-    if (courseField) {
-        courseField.value = course;
-    }
-
-    document.getElementById("selectedCourse").value = course;
-    document.getElementById("selectedAmount").value = amount;
-
-    localStorage.setItem("course", course);
-    localStorage.setItem("amount", amount);
-
-}
-function startPayment() {
-
-    let amount = document.getElementById("selectedAmount").value;
-
-    if (!amount) {
-        alert("Please select a course first.");
-        return;
-    }
-
-    var options = {
-
-        key: "rzp_test_TJlanaKoERv8bs",
-
-        amount: amount * 100,
-
-        currency: "INR",
-
-        name: "Anjali Bike Driving School",
-
-        description: "Bike Training Booking",
-
-      handler: function (response) {
-
-    const bookingID = "BOOK-" + Date.now();
-
-    const bookingData = {
-
-        bookingID: bookingID,
-
-        paymentID: response.razorpay_payment_id,
-
-        name: document.querySelector('input[name="name"]').value,
-
-        address: document.querySelector('input[name="address"]').value,
-
-        email: document.querySelector('input[name="email"]').value,
-
-        mobile: document.querySelector('input[name="mobile"]').value,
-
-        course: document.getElementById("selectedCourse").value,
-
-        amount: document.getElementById("selectedAmount").value,
-
-        date: new Date().toLocaleString(),
-
-        status: "Paid"
-
-    };
-
-    db.collection("bookings")
-
-    .doc(bookingID)
-
-    .set(bookingData)
-
-    .then(() => {
-
-        alert("Booking Successful ✅");
-
-        window.location.href = "receipt.html?id=" + bookingID;
-
-    })
-
-    .catch((error) => {
-
-        console.log(error);
-
-        alert("Booking Save Failed");
-
-    });
-
-}
-        }
-
-    };
-
-    var rzp = new Razorpay(options);
-
-    rzp.open();
-
-}
+});
