@@ -4470,3 +4470,217 @@ header .container {
     }
 
 }
+/* =========================
+   FLASH DEAL POPUP
+========================= */
+
+.flash-deal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    padding: 20px;
+}
+
+.flash-deal-overlay.show {
+    display: flex;
+    animation: flashFadeIn 0.35s ease;
+}
+
+.flash-deal-box {
+    position: relative;
+    width: 360px;
+    max-width: 92vw;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 22px 20px 24px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    border: 3px solid #d62828;
+    animation: flashPopup 0.4s ease;
+}
+
+/* Logo */
+
+.flash-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+/* Close */
+
+.flash-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: #f1f1f1;
+    color: #222;
+    font-size: 22px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+/* Flash Deal */
+
+.flash-badge {
+    display: inline-block;
+    background: #d62828;
+    color: #ffffff;
+    padding: 7px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: flashGlow 1.2s infinite;
+}
+
+.flash-small-text {
+    margin: 14px 0 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+.flash-deal-box h2 {
+    margin: 0;
+    font-size: 48px;
+    line-height: 1;
+    color: #d62828;
+    font-weight: 800;
+}
+
+.flash-deal-box h2 span {
+    font-size: 25px;
+}
+
+.flash-training {
+    margin: 8px 0 4px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #222;
+}
+
+.flash-limited {
+    margin: 0 0 18px;
+    font-size: 13px;
+    color: #666;
+}
+
+/* Claim Button */
+
+.flash-claim-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 13px 15px;
+    background: #d62828;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.flash-claim-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(214, 40, 40, 0.3);
+}
+
+/* Animations */
+
+@keyframes flashFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flashPopup {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes flashGlow {
+    0%,
+    100% {
+        box-shadow: 0 0 0 rgba(214, 40, 40, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 18px rgba(214, 40, 40, 0.45);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .flash-deal-overlay {
+        padding: 15px;
+    }
+
+    .flash-deal-box {
+        width: 100%;
+        max-width: 330px;
+        padding: 18px 16px 20px;
+        border-radius: 18px;
+    }
+
+    .flash-logo {
+        width: 58px;
+        height: 58px;
+    }
+
+    .flash-badge {
+        font-size: 12px;
+        padding: 6px 13px;
+    }
+
+    .flash-small-text {
+        margin-top: 11px;
+        font-size: 12px;
+    }
+
+    .flash-deal-box h2 {
+        font-size: 40px;
+    }
+
+    .flash-deal-box h2 span {
+        font-size: 21px;
+    }
+
+    .flash-training {
+        font-size: 15px;
+    }
+
+    .flash-limited {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .flash-claim-btn {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+}
