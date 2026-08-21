@@ -919,3 +919,31 @@ window.open(
 
 
 }
+// =========================
+// FLASH DEAL POPUP
+// =========================
+
+window.addEventListener("load", function () {
+
+    setTimeout(function () {
+
+        const popup = document.getElementById("flashDealPopup");
+
+        if (popup) {
+            popup.classList.add("show");
+        }
+
+    }, 3000);
+
+});
+
+
+function closeFlashDeal() {
+
+    const popup = document.getElementById("flashDealPopup");
+
+    if (popup) {
+        popup.classList.remove("show");
+    }
+
+}
