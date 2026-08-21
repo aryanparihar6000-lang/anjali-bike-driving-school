@@ -947,3 +947,382 @@ function closeFlashDeal() {
     }
 
 }
+/* =========================================
+   ANJALI AI CHAT ASSISTANT
+========================================= */
+
+function openAIChat() {
+
+    const chatBox = document.getElementById("aiChatBox");
+    const chatButton = document.getElementById("aiChatButton");
+
+    chatBox.style.display = "flex";
+    chatButton.style.display = "none";
+
+}
+
+
+function closeAIChat() {
+
+    const chatBox = document.getElementById("aiChatBox");
+    const chatButton = document.getElementById("aiChatButton");
+
+    chatBox.style.display = "none";
+    chatButton.style.display = "block";
+
+}
+
+
+/* QUICK QUESTIONS */
+
+function askAI(type) {
+
+    let question = "";
+
+    if (type === "courses") {
+        question = "What courses do you offer?";
+    }
+
+    if (type === "fees") {
+        question = "What are your fees?";
+    }
+
+    if (type === "timing") {
+        question = "What are your training timings?";
+    }
+
+    if (type === "location") {
+        question = "Where are you located?";
+    }
+
+    document.getElementById("aiUserInput").value = question;
+
+    sendAIMessage();
+
+}
+
+
+/* SEND MESSAGE */
+
+function sendAIMessage() {
+
+    const input = document.getElementById("aiUserInput");
+    const message = input.value.trim();
+
+    if (message === "") {
+        return;
+    }
+
+    addUserMessage(message);
+
+    input.value = "";
+
+    setTimeout(function () {
+
+        const reply = generateAIReply(message);
+
+        addAIMessage(reply);
+
+    }, 500);
+
+}
+
+
+/* USER MESSAGE */
+
+function addUserMessage(message) {
+
+    const messages = document.getElementById("aiChatMessages");
+
+    const div = document.createElement("div");
+
+    div.className = "user-message";
+
+    div.textContent = message;
+
+    messages.appendChild(div);
+
+    messages.scrollTop = messages.scrollHeight;
+
+}
+
+
+/* AI MESSAGE */
+
+function addAIMessage(message) {
+
+    const messages = document.getElementById("aiChatMessages");
+
+    const div = document.createElement("div");
+
+    div.className = "ai-message";
+
+    div.innerHTML = message;
+
+    messages.appendChild(div);
+
+    messages.scrollTop = messages.scrollHeight;
+
+}
+
+
+/* AI REPLIES */
+
+function generateAIReply(message) {
+
+    const text = message.toLowerCase();
+
+
+    /* COURSES */
+
+    if (
+        text.includes("course") ||
+        text.includes("training") ||
+        text.includes("bike") ||
+        text.includes("scooty")
+    ) {
+
+        return `
+        🏍️ <strong>Our Training Courses</strong>
+
+        <br><br>
+
+        • Basic Bike Training – ₹6,400<br>
+        • Advanced Training – ₹10,000<br>
+        • Ladies Special Batch – ₹7,000<br>
+        • 14 Days Flash Deal – ₹5,900
+
+        <br><br>
+
+        📅 We provide practical road training for beginners.
+        `;
+
+    }
+
+
+    /* FEES */
+
+    if (
+        text.includes("fee") ||
+        text.includes("price") ||
+        text.includes("cost") ||
+        text.includes("paisa") ||
+        text.includes("kitna")
+    ) {
+
+        return `
+        💰 <strong>Training Fees</strong>
+
+        <br><br>
+
+        🏍️ Basic Bike Training – ₹6,400<br>
+        🏍️ Advanced Training – ₹10,000<br>
+        👩 Ladies Special – ₹7,000<br>
+        🔥 14 Days Flash Deal – ₹5,900
+
+        <br><br>
+
+        📞 For doorstep training or customized plans,
+        please call us on <strong>9599289308</strong>.
+        `;
+
+    }
+
+
+    /* TIMING */
+
+    if (
+        text.includes("time") ||
+        text.includes("timing") ||
+        text.includes("kab") ||
+        text.includes("hour")
+    ) {
+
+        return `
+        🕐 <strong>Training Timing</strong>
+
+        <br><br>
+
+        We are available from:
+
+        <br><br>
+
+        <strong>7:00 AM – 10:00 PM</strong>
+
+        <br><br>
+
+        Different time slots are available according to your convenience.
+        `;
+
+    }
+
+
+    /* LOCATION */
+
+    if (
+        text.includes("location") ||
+        text.includes("address") ||
+        text.includes("where") ||
+        text.includes("kaha") ||
+        text.includes("place")
+    ) {
+
+        return `
+        📍 <strong>Our Location</strong>
+
+        <br><br>
+
+        Bharat Nagar,<br>
+        New Friends Colony,<br>
+        New Delhi – 110025
+
+        <br><br>
+
+        🚗 Training is available in the surrounding Delhi area.
+        `;
+
+    }
+
+
+    /* BOOKING */
+
+    if (
+        text.includes("book") ||
+        text.includes("booking") ||
+        text.includes("join") ||
+        text.includes("admission")
+    ) {
+
+        return `
+        📅 <strong>Book Your Training</strong>
+
+        <br><br>
+
+        You can book your training directly from our website.
+
+        <br><br>
+
+        👉 Scroll to the <strong>Book Your Class</strong> section and fill the form.
+
+        <br><br>
+
+        📞 Or call us: <strong>9599289308</strong>
+        `;
+
+    }
+
+
+    /* CONTACT */
+
+    if (
+        text.includes("contact") ||
+        text.includes("phone") ||
+        text.includes("call") ||
+        text.includes("number") ||
+        text.includes("whatsapp")
+    ) {
+
+        return `
+        📞 <strong>Contact Us</strong>
+
+        <br><br>
+
+        Phone: <strong>9599289308</strong>
+
+        <br><br>
+
+        💬 You can also contact us through WhatsApp.
+        `;
+
+    }
+
+
+    /* LADIES */
+
+    if (
+        text.includes("ladies") ||
+        text.includes("lady") ||
+        text.includes("women") ||
+        text.includes("female")
+    ) {
+
+        return `
+        👩 <strong>Ladies Special Training</strong>
+
+        <br><br>
+
+        We provide beginner-friendly and safety-focused bike/scooty training for ladies.
+
+        <br><br>
+
+        💰 Ladies Special Batch – ₹7,000
+
+        <br><br>
+
+        📞 Call us on <strong>9599289308</strong> for more details.
+        `;
+
+    }
+
+
+    /* BEGINNER */
+
+    if (
+        text.includes("beginner") ||
+        text.includes("new") ||
+        text.includes("learn")
+    ) {
+
+        return `
+        🏍️ <strong>Beginner Training</strong>
+
+        <br><br>
+
+        Yes! Our training is specially designed for beginners.
+
+        <br><br>
+
+        We teach:
+
+        <br>
+
+        ✔ Bike/Scooty control<br>
+        ✔ Balance<br>
+        ✔ Traffic rules<br>
+        ✔ Road riding<br>
+        ✔ Parking<br>
+        ✔ Safety techniques
+
+        <br><br>
+
+        😊 No previous riding experience is required.
+        `;
+
+    }
+
+
+    /* DEFAULT */
+
+    return `
+    👋 Thanks for your message!
+
+    <br><br>
+
+    I can help you with:
+
+    <br><br>
+
+    🏍️ Courses<br>
+    💰 Fees<br>
+    📅 Booking<br>
+    🕐 Training Timing<br>
+    📍 Location<br>
+    👩 Ladies Training<br>
+    📞 Contact
+
+    <br><br>
+
+    Please type your question or select one of the options above.
+    `;
+
+}
