@@ -495,7 +495,11 @@ Enroll Now
 
         </div>
 
-       <form id="bookingForm" class="booking-form">
+     <form
+    id="bookingForm"
+    class="booking-form"
+    action="https://formspree.io/f/mlgqavzy"
+    method="POST">
             <input type="hidden" id="selectedCourse" name="selected_course">
 
 <input type="hidden" id="selectedAmount" name="amount">
@@ -581,8 +585,8 @@ required>
                 name="message"
                 placeholder="Any Message"></textarea>
 
-           <button type="button" onclick="startPayment()">
-    Proceed to Payment
+           <button type="submit">
+    Submit Booking
 </button>
         </form>
 
@@ -869,6 +873,9 @@ Professional Two Wheeler Driving Training in New Delhi
 
 <a href="#booking" class="float-btn booking-btn-float">📅</a>
 
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     
 <script src="script.js"></script>
