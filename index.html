@@ -249,27 +249,7 @@ class="btn whatsapp">
 </div>
 
 </section> 
-<div class="deal-card">
 
-<img src="images/doorstep.png" alt="Doorstep Training">
-
-<h3>🏠 Doorstep Training</h3>
-
-<p class="days">Trainer Comes To You</p>
-
-<h2>Call For Price</h2>
-
-<div class="discount">Customized Plan Available</div>
-
-<a href="tel:9599289308" class="deal-btn">Call Now</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section> 
 
  <!-- ABOUT SECTION -->
 
@@ -464,6 +444,8 @@ Call Now
     
 <!-- ================= COURSES ================= -->
 
+<!-- ================= COURSES ================= -->
+
 <section class="courses" id="courses">
 
 <div class="container">
@@ -478,47 +460,76 @@ Call Now
 
 <div class="course-grid">
 
+<!-- BASIC BIKE -->
+
 <div class="course-card">
+
 <h3>Basic Bike Training</h3>
+
 <p class="price">₹6,400</p>
+
 <ul>
 <li>✔ Beginner Training</li>
 <li>✔ Traffic Rules</li>
 <li>✔ Safety Tips</li>
 <li>✔ Practical Sessions</li>
 </ul>
-<a href="#booking" class="btn"
-onclick="selectCourse('Basic Bike Training','6400')">
+
+<a href="#booking"
+   class="btn"
+   onclick="selectCourse('Basic Bike Training','6400')">
 Enroll Now
 </a>
 
+</div>
+
+
+<!-- ADVANCED -->
+
 <div class="course-card featured">
+
 <h3>Advanced Training</h3>
+
 <p class="price">₹10,000</p>
+
 <ul>
 <li>✔ City Road Practice</li>
 <li>✔ Heavy Traffic Riding</li>
 <li>✔ Parking Skills</li>
 <li>✔ Certificate</li>
 </ul>
-<a href="#booking" class="btn"
-onclick="selectCourse('Advanced Training','10000')">
+
+<a href="#booking"
+   class="btn"
+   onclick="selectCourse('Advanced Training','10000')">
 Enroll Now
 </a>
 
+</div>
+
+
+<!-- LADIES -->
+
 <div class="course-card">
+
 <h3>Ladies Special Batch</h3>
+
 <p class="price">₹7,000</p>
+
 <ul>
 <li>✔ Female Trainer Support</li>
 <li>✔ Safe Learning</li>
 <li>✔ Flexible Timing</li>
 <li>✔ Practical Sessions</li>
 </ul>
-<a href="#booking" class="btn"
-onclick="selectCourse('Ladies Special Batch','7000')">
+
+<a href="#booking"
+   class="btn"
+   onclick="selectCourse('Ladies Special Batch','7000')">
 Enroll Now
 </a>
+
+</div>
 
 </div>
 
@@ -542,19 +553,22 @@ Enroll Now
 
             <!-- PHOTO 1 -->
             <div class="gallery-item">
-                <img src="images/bike1.jpeg">
+                <img 
+                    src="images/bike1.jpeg">
                      alt="Bike Training at Anjali Bike Driving School">
             </div>
 
             <!-- PHOTO 2 -->
             <div class="gallery-item">
-                <img src="images/bike2.jpeg">
+                <img
+                    src="images/bike2.jpeg">
                      alt="Bike Riding Training">
             </div>
 
             <!-- PHOTO 3 -->
             <div class="gallery-item">
-                <img src="images/bike3.jpeg">
+                <img
+                    src="images/bike3.jpeg">
                      alt="Two Wheeler Training">
             </div>
 
@@ -937,6 +951,95 @@ Professional Two Wheeler Driving Training in New Delhi
 <script src="script.js"></script>
     
 <script src="booking.js"></script>    
+
+<!-- ================= AI CHAT BOX ================= -->
+
+<div class="ai-chat-box" id="aiChatBox">
+
+    <div class="ai-chat-header">
+
+        <div class="ai-chat-title">
+            🤖
+            <div>
+                <strong>Anjali AI Assistant</strong>
+                <span>Online • Ready to Help</span>
+            </div>
+        </div>
+
+        <button onclick="closeAIChat()" class="ai-close">×</button>
+
+    </div>
+
+
+    <div class="ai-chat-messages" id="aiChatMessages">
+
+        <div class="ai-message">
+            👋 Namaste! Welcome to <strong>Anjali Bike Driving School</strong>.
+
+            <br><br>
+
+            Main aapko courses, fees, training duration aur booking ke baare mein bata sakta hoon.
+
+            <br><br>
+
+            Aap kya jaanna chahenge?
+        </div>
+
+    </div>
+
+
+    <div class="ai-quick-buttons">
+
+        <button onclick="askAI('courses')">
+            🏍️ Courses
+        </button>
+
+        <button onclick="askAI('fees')">
+            💰 Fees
+        </button>
+
+        <button onclick="askAI('timing')">
+            🕐 Timing
+        </button>
+
+        <button onclick="askAI('location')">
+            📍 Location
+        </button>
+
+    </div>
+
+
+    <div class="ai-chat-input">
+
+        <input
+            type="text"
+            id="aiUserInput"
+            placeholder="Type your question..."
+            onkeydown="if(event.key==='Enter') sendAIMessage()">
+
+        <button onclick="sendAIMessage()">
+            ➤
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- AI CHAT FLOATING BUTTON -->
+
+<button
+    class="ai-chat-button"
+    id="aiChatButton"
+    onclick="openAIChat()">
+
+    🤖
+
+    <span class="ai-notification">1</span>
+
+</button>
+
+<!-- ================= END AI CHAT BOX ================= -->
     
 </body>
     
